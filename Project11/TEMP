@@ -1,5 +1,0 @@
-gcc *.c -ltl -o *
-
-flex lexical.l
-yacc -d syntax.y
-cc lex.yy.c y.tab.c -o parser

@@ -1,8 +1,0 @@
-struct
-{
-	int xx, y, z;
-	if (x == y)
-		return x + z + 1 + 01 + 0x1 + 0X1;
-	else
-		return x << y;
-};
