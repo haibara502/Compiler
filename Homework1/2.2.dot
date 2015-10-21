@@ -1,0 +1,10 @@
+digraph{
+	rankdir = LR
+	empty [label = "" color = white shape = none fontcolor = white style = invisible margin = 0]
+	A [label = "{0, 1, 2, 3}" shape = egg]
+	B [label = "{0, 1, 2, 3}" shape = egg]
+	C [label = "{0, 1, 2, 3}" shape = egg]
+	D [label = "{0, 1, 2, 3}" shape = egg]
+	E [label = "{0, 1, 2, 3}" shape = egg]
+	empty -> A [label = "start"]
+}

@@ -1,0 +1,10 @@
+digraph{
+	rankdir = LR
+	empty [label = "" color = white shape = none fontcolor = white style = invisible]
+	A [label = "0" shape = doublecircle]
+	B [label = "1" shape = doublecircle]
+	C [label = "2" shape = doublecircle]
+	empty -> A [label = "start"]
+	{A, B, C} -> B [label = "a"]
+	{A, B, C} -> C [label = "b"]
+}

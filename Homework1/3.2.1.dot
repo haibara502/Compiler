@@ -1,0 +1,33 @@
+digraph{
+	rankdir = LR
+	empty [label = "" color = white shape = none fontcolor = white style = invisible]
+	A [label = "0" shape = circle]
+	B [label = "1" shape = circle]
+	C [label = "2" shape = circle]
+	D [label = "3" shape = circle]
+	E [label = "4" shape = circle]
+	F [label = "5" shape = circle]
+	G [label = "6" shape = circle]
+	H [label = "7" shape = circle]
+	I [label = "8" shape = circle]
+	J [label = "9" shape = circle]
+	K [label = "10" shape = circle]
+	L [label = "11" shape = doublecircle]
+	A -> B [label = "a"  weight = 8] //a
+	C -> A [label = "ɛ" ]
+	B -> D [label = "ɛ" ]
+	B -> A [label = "ɛ" ]
+	C:ne -> D:nw [label = "ɛ" ] //a* C -> D
+	E -> F [label = "b"  weight = 8] //b
+	G -> E [label = "ɛ"  weight = 8]
+	F -> H [label = "ɛ"  weight = 8]
+	F -> E [label = "ɛ" ]
+	G -> H [label = "ɛ" ] //b* G -> H
+	I -> {C, G} [label = "ɛ"]
+	{D, H} -> J [label = "ɛ"] //a* | b* I -> J
+	K -> I [label = "ɛ"]
+	J -> L [label = "ɛ"]
+	J -> I [label = "ɛ"]
+	K -> L [label = "ɛ"] // (a* | b*)* K -> L
+	empty -> K [label = "start"]
+}
