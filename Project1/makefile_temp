@@ -1,0 +1,8 @@
+yacc: y.tab.c lex.yy.c 
+	cc lex.yy.c y.tab.c -ly -o parser
+
+y.tab.c y.tab.h: require.h syntax.y 
+	yacc -d syntax.y
+
+lex.yy.c: require.h lexical.l
+	flex lexical.l

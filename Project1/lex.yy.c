@@ -380,9 +380,9 @@ struct yy_trans_info
 static yyconst flex_int16_t yy_accept[76] =
     {   0,
         0,    0,   27,   26,    1,    2,   23,   22,   22,   11,
-       12,   22,   20,   22,   21,    3,    3,   22,   25,   22,
-       18,   13,   14,   18,   18,   18,   18,   18,   18,   18,
-       15,   22,   16,   23,   22,   24,   19,   23,    3,    0,
+       12,   22,   20,   22,   21,    3,    3,   19,   22,   25,
+       22,   18,   13,   14,   18,   18,   18,   18,   18,   18,
+       18,   15,   22,   16,   23,   22,   24,   23,    3,    0,
         3,    3,   22,   18,   18,   18,   18,   18,   18,    6,
        18,   18,   18,   18,   18,   18,   10,   17,   18,   18,
        18,   18,    7,   18,   18,    8,   18,   18,   18,   18,
@@ -432,10 +432,10 @@ static yyconst flex_int32_t yy_meta[46] =
 
 static yyconst flex_int16_t yy_base[78] =
     {   0,
-        0,    0,  130,  185,  185,  185,   99,   91,   40,  185,
-       81,   37,  185,   36,  185,   35,   37,   42,   77,   43,
-       49,  185,  185,   51,   53,   56,   58,   62,   65,   67,
-      185,   56,  185,  185,  185,  185,  185,  185,   69,   71,
+        0,    0,  118,  185,  185,  185,   91,   79,   40,  185,
+      185,   37,  185,   36,  185,   35,   37,  185,   42,   77,
+       43,   49,  185,  185,   51,   53,   56,   58,   62,   65,
+       67,  185,   56,  185,  185,  185,  185,  185,   69,   71,
        76,   85,   60,    0,   87,   89,   23,   76,   78,   77,
        85,   86,   91,   96,   98,  104,  101,  107,  109,  110,
       120,  125,  112,  117,  130,  127,  132,  133,  135,  138,
@@ -446,29 +446,29 @@ static yyconst flex_int16_t yy_def[78] =
     {   0,
        75,    1,   75,   75,   75,   75,   75,   75,   75,   75,
        75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       76,   75,   75,   76,   76,   76,   76,   76,   76,   76,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   77,   76,   76,   28,   28,   28,   28,
-       28,   28,   28,   28,   28,   28,   28,   28,   28,   28,
-       28,   28,   28,   28,   28,   28,   28,   28,   28,   28,
-       28,   28,   28,   28,    0,   75,   75
+       75,   76,   75,   75,   76,   76,   76,   76,   76,   76,
+       76,   75,   75,   75,   75,   75,   75,   75,   75,   75,
+       75,   75,   75,   77,   76,   76,   29,   29,   29,   29,
+       29,   29,   29,   29,   29,   29,   29,   29,   29,   29,
+       29,   29,   29,   29,   29,   29,   29,   29,   29,   29,
+       29,   29,   29,   29,    0,   75,   75
     } ;
 
 static yyconst flex_int16_t yy_nxt[231] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,    8,   12,
-       13,   14,   15,    8,   16,   17,    4,   18,   19,   20,
-       21,   21,   22,   23,    8,   21,   21,   24,   25,   26,
-       27,   28,   21,   21,   21,   21,   29,   30,   21,   21,
-       21,   31,   32,   33,   34,   35,   38,   38,   44,   39,
-       39,   41,   42,   45,   36,   36,   40,   55,   36,   43,
-       35,   35,   43,   44,   44,   44,   44,   44,   44,   45,
-       44,   44,   44,   44,   36,   40,   44,   44,   36,   44,
+       13,   14,   15,    8,   16,   17,   18,   19,   20,   21,
+       22,   22,   23,   24,    8,   22,   22,   25,   26,   27,
+       28,   29,   22,   22,   22,   22,   30,   31,   22,   22,
+       22,   32,   33,   34,   35,   36,   38,   38,   44,   39,
+       39,   41,   42,   45,   37,   37,   40,   55,   37,   43,
+       36,   36,   43,   44,   44,   44,   44,   44,   44,   45,
+       44,   44,   44,   44,   37,   40,   44,   44,   37,   44,
        44,   44,   44,   39,   39,   39,   39,   46,   47,   48,
-       41,   41,   50,   49,   52,   35,   51,   37,   35,   41,
+       41,   41,   50,   49,   52,   36,   51,   37,   36,   41,
 
        42,   44,   44,   44,   44,   53,   45,   45,   45,   36,
-       45,   45,   45,   56,   57,   45,   45,   35,   54,   45,
+       45,   45,   45,   56,   57,   45,   45,   75,   54,   45,
        45,   45,   61,   58,   59,   45,   45,   60,   45,   75,
        45,   45,   45,   63,   45,   45,   62,   45,   45,   45,
        45,   45,   45,   45,   45,   75,   45,   45,   64,   65,
@@ -490,15 +490,15 @@ static yyconst flex_int16_t yy_chk[231] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    9,   12,   14,   77,   16,
-       16,   17,   17,   47,   14,   12,   16,   47,    9,   18,
-       18,   20,   20,   21,   21,   24,   24,   25,   25,   76,
-       26,   26,   27,   27,   32,   16,   28,   28,   43,   29,
-       29,   30,   30,   39,   39,   40,   40,   24,   25,   26,
-       41,   41,   28,   27,   29,   19,   28,   11,   32,   42,
+       16,   17,   17,   47,   14,   12,   16,   47,    9,   19,
+       19,   21,   21,   22,   22,   25,   25,   26,   26,   76,
+       27,   27,   28,   28,   33,   16,   29,   29,   43,   30,
+       30,   31,   31,   39,   39,   40,   40,   25,   26,   27,
+       41,   41,   29,   28,   30,   20,   29,    8,   33,   42,
 
-       42,   45,   45,   46,   46,   30,   48,   50,   49,    8,
-       48,   50,   49,   48,   49,   51,   52,    7,   46,   51,
-       52,   53,   54,   51,   52,   53,   54,   53,   55,    3,
+       42,   45,   45,   46,   46,   31,   48,   50,   49,    7,
+       48,   50,   49,   48,   49,   51,   52,    3,   46,   51,
+       52,   53,   54,   51,   52,   53,   54,   53,   55,    0,
        54,   57,   55,   56,   56,   57,   55,   58,   56,   59,
        60,   58,   63,   59,   60,    0,   63,   64,   59,   60,
        61,   64,   61,   64,   61,   62,   62,   66,   65,   62,
@@ -531,12 +531,10 @@ char *yytext;
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "require.h"
 #include "y.tab.h"
-extern YYSTYPE yylval;
-
 int line = 0;
-#line 540 "lex.yy.c"
+#line 538 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -723,10 +721,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 40 "lexical.l"
+#line 38 "lexical.l"
 
 
-#line 730 "lex.yy.c"
+#line 728 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -811,299 +809,284 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 42 "lexical.l"
+#line 40 "lexical.l"
 ;
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 44 "lexical.l"
+#line 42 "lexical.l"
 {
 	++line;
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 48 "lexical.l"
+#line 46 "lexical.l"
 {	
 	printf("INT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "INT");
+	sprintf(yylval.MYTYPE.token, "%s", "INT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return INT;
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 57 "lexical.l"
-{	
+#line 54 "lexical.l"
+{
 	printf("STRUCT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "STRUCT");
+	sprintf(yylval.MYTYPE.token, "%s", "STRUCT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return STRUCT;
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 66 "lexical.l"
+#line 62 "lexical.l"
 {	
 	printf("RETURN %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RETURN");
+	sprintf(yylval.MYTYPE.token, "%s", "RETURN");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RETURN;
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 75 "lexical.l"
+#line 70 "lexical.l"
 {	
 	printf("IF %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "IF");
+	sprintf(yylval.MYTYPE.token, "%s", "IF");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return IF;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 84 "lexical.l"
+#line 78 "lexical.l"
 {	
 	printf("ELSE %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ELSE");
+	sprintf(yylval.MYTYPE.token, "%s", "ELSE");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return ELSE;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 93 "lexical.l"
+#line 86 "lexical.l"
 {	
 	printf("BREAK %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "BREAK");
+	sprintf(yylval.MYTYPE.token, "%s", "BREAK");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return BREAK;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 102 "lexical.l"
+#line 94 "lexical.l"
 {	
 	printf("CONT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "CONT");
+	sprintf(yylval.MYTYPE.token, "%s", "CONT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return CONT;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 111 "lexical.l"
+#line 102 "lexical.l"
 {	
 	printf("FOR %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "FOR");
+	sprintf(yylval.MYTYPE.token, "%s", "FOR");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return FOR;
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 120 "lexical.l"
+#line 110 "lexical.l"
 {	
 	printf("LP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "LP");
+	sprintf(yylval.MYTYPE.token, "%s", "LP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return LP;
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 129 "lexical.l"
+#line 118 "lexical.l"
 {	
 	printf("RP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RP");
+	sprintf(yylval.MYTYPE.token, "%s", "RP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RP;
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 138 "lexical.l"
+#line 126 "lexical.l"
 {	
 	printf("LB %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "LB");
+	sprintf(yylval.MYTYPE.token, "%s", "LB");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return LB;
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 147 "lexical.l"
+#line 134 "lexical.l"
 {	
 	printf("RB %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RB");
+	sprintf(yylval.MYTYPE.token, "%s", "RB");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RB;
 }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 156 "lexical.l"
+#line 142 "lexical.l"
 {	
 	printf("LC %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "LC");
+	sprintf(yylval.MYTYPE.token, "%s", "LC");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return LC;
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 165 "lexical.l"
+#line 150 "lexical.l"
 {	
 	printf("RC %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RC");
+	sprintf(yylval.MYTYPE.token, "%s", "RC");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RC;
 }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 175 "lexical.l"
+#line 159 "lexical.l"
 {	
 	printf("TYPE %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "TYPE");
+	sprintf(yylval.MYTYPE.token, "%s", "TYPE");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return TYPE;
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 184 "lexical.l"
+#line 167 "lexical.l"
 {	
 	printf("ID %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ID");
+	sprintf(yylval.MYTYPE.token, "%s", "ID");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return ID;
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 193 "lexical.l"
+#line 176 "lexical.l"
 {	
 	printf("SEMI %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "SEMI");
+	sprintf(yylval.MYTYPE.token, "%s", "SEMI");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return SEMI;
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 202 "lexical.l"
+#line 185 "lexical.l"
 {	
 	printf("COMMA %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "COMMA");
+	sprintf(yylval.MYTYPE.token, "%s", "COMMA");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return COMMA;
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 211 "lexical.l"
+#line 194 "lexical.l"
 {	
 	printf("DOT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "DOT");
+	sprintf(yylval.MYTYPE.token, "%s", "DOT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return DOT;
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 220 "lexical.l"
+#line 203 "lexical.l"
 {	
 	printf("BINARYOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "BINARYOP");
+	sprintf(yylval.MYTYPE.token, "%s", "BINARYOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return BINARYOP;
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 229 "lexical.l"
+#line 212 "lexical.l"
 {	
 	printf("UNARYOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "UNARYOP");
+	sprintf(yylval.MYTYPE.token, "%s", "UNARYOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return UNARYOP;
 }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 238 "lexical.l"
+#line 221 "lexical.l"
 {	
 	printf("ASSIGNOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ASSIGNOP");
+	sprintf(yylval.MYTYPE.token, "%s", "ASSIGNOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return ASSIGNOP;
 }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 247 "lexical.l"
+#line 230 "lexical.l"
 {
 	printf("ASSIGNOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ASSIGNOP");
+	sprintf(yylval.MYTYPE.token, "%s", "ASSIGNOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return EQUALOP;
 }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 256 "lexical.l"
+#line 239 "lexical.l"
 ECHO;
 	YY_BREAK
-#line 1107 "lex.yy.c"
+#line 1090 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2101,7 +2084,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 256 "lexical.l"
+#line 239 "lexical.l"
 
 
+
+int yywrap(void) {
+    return 1;
+}
 

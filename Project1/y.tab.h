@@ -106,18 +106,11 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 10 "syntax.y" /* yacc.c:1909  */
+#line 11 "syntax.y" /* yacc.c:1909  */
 
-	struct self_type
-	{
-		YYSTYPE *left, *right;
-		int value;
-		char symbol[20];	
-		char content[20];
-		int line;
-	} MYTYPE;
+	struct SelfType MYTYPE;
 
-#line 121 "y.tab.h" /* yacc.c:1909  */
+#line 114 "y.tab.h" /* yacc.c:1909  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1

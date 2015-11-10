@@ -1,0 +1,19 @@
+digraph G
+{
+	A [label = "S", shape = plaintext]
+	B [label = "S", shape = plaintext]
+	C [label = "S", shape = plaintext]
+	D [label = "*", shape = plaintext]
+	E [label = "S", shape = plaintext]
+	F [label = "S", shape = plaintext]
+	G [label = "+", shape = plaintext]
+	H [label = "a", shape = plaintext]
+	I [label = "a", shape = plaintext]
+	J [label = "a", shape = plaintext]
+	
+	A -> {B, C, D}
+	B -> {E, F, G}
+	E -> H
+	F -> I
+	C -> J
+}

@@ -2,10 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "require.h"
 #include "y.tab.h"
-extern YYSTYPE yylval;
-
 int line = 0;
 %}
 
@@ -14,7 +12,7 @@ POSDIGIT ([1-9])
 ALPHA ([a-zA-Z])
 INT (((0|0x|0X)?){DIGIT}+|({POSDIGIT}+{DIGIT}*))
 ID (({ALPHA}|_)+({DIGIT}|{ALPHA}|_)*)
-SEMI ");"
+SEMI ";"
 COMMA ","
 DOT "."
 BOOLBINARY (">"|">"=|"<"|"<"=|==|!=|"||"|&&)
@@ -48,126 +46,112 @@ FOR "for"
 {INT} {	
 	printf("INT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "INT");
+	sprintf(yylval.MYTYPE.token, "%s", "INT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return INT;
 }
 
-{STRUCT} {	
+{STRUCT} {
 	printf("STRUCT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "STRUCT");
+	sprintf(yylval.MYTYPE.token, "%s", "STRUCT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return STRUCT;
 }
 
 {RETURN} {	
 	printf("RETURN %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RETURN");
+	sprintf(yylval.MYTYPE.token, "%s", "RETURN");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RETURN;
 }
 
 {IF} {	
 	printf("IF %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "IF");
+	sprintf(yylval.MYTYPE.token, "%s", "IF");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return IF;
 }
 
 {ELSE} {	
 	printf("ELSE %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ELSE");
+	sprintf(yylval.MYTYPE.token, "%s", "ELSE");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return ELSE;
 }
 
 {BREAK} {	
 	printf("BREAK %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "BREAK");
+	sprintf(yylval.MYTYPE.token, "%s", "BREAK");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return BREAK;
 }
 
 {CONT} {	
 	printf("CONT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "CONT");
+	sprintf(yylval.MYTYPE.token, "%s", "CONT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return CONT;
 }
 
 {FOR} {	
 	printf("FOR %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "FOR");
+	sprintf(yylval.MYTYPE.token, "%s", "FOR");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return FOR;
 }
 
 {LP} {	
 	printf("LP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "LP");
+	sprintf(yylval.MYTYPE.token, "%s", "LP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return LP;
 }
 
 {RP} {	
 	printf("RP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RP");
+	sprintf(yylval.MYTYPE.token, "%s", "RP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RP;
 }
 
 {LB} {	
 	printf("LB %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "LB");
+	sprintf(yylval.MYTYPE.token, "%s", "LB");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return LB;
 }
 
 {RB} {	
 	printf("RB %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RB");
+	sprintf(yylval.MYTYPE.token, "%s", "RB");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RB;
 }
 
 {LC} {	
 	printf("LC %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "LC");
+	sprintf(yylval.MYTYPE.token, "%s", "LC");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return LC;
 }
 
 {RC} {	
 	printf("RC %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "RC");
+	sprintf(yylval.MYTYPE.token, "%s", "RC");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return RC;
 }
 
@@ -175,82 +159,85 @@ FOR "for"
 {TYPE} {	
 	printf("TYPE %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "TYPE");
+	sprintf(yylval.MYTYPE.token, "%s", "TYPE");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
 	return TYPE;
 }
 
 {ID} {	
 	printf("ID %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ID");
+	sprintf(yylval.MYTYPE.token, "%s", "ID");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return ID;
 }
 	
 {SEMI} {	
 	printf("SEMI %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "SEMI");
+	sprintf(yylval.MYTYPE.token, "%s", "SEMI");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return SEMI;
 }
 
 {COMMA} {	
 	printf("COMMA %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "COMMA");
+	sprintf(yylval.MYTYPE.token, "%s", "COMMA");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return COMMA;
 }
 
 {DOT} {	
 	printf("DOT %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "DOT");
+	sprintf(yylval.MYTYPE.token, "%s", "DOT");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return DOT;
 }
 
 {BINARYOP} {	
 	printf("BINARYOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "BINARYOP");
+	sprintf(yylval.MYTYPE.token, "%s", "BINARYOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return BINARYOP;
 }
 
 {UNARYOP} {	
 	printf("UNARYOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "UNARYOP");
+	sprintf(yylval.MYTYPE.token, "%s", "UNARYOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return UNARYOP;
 }
 
 {ASSIGNOP} {	
 	printf("ASSIGNOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ASSIGNOP");
+	sprintf(yylval.MYTYPE.token, "%s", "ASSIGNOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return ASSIGNOP;
 }
 
 {EQUALOP} {
 	printf("ASSIGNOP %s\n", yytext);
 	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.symbol, "%s", "ASSIGNOP");
+	sprintf(yylval.MYTYPE.token, "%s", "ASSIGNOP");
 	yylval.MYTYPE.line = line;
-	yylval.MYTYPE.left = yylval.MYTYPE.right = NULL;
+
 	return EQUALOP;
 }
 
 %%
+
+int yywrap(void) {
+    return 1;
+}

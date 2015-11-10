@@ -1,0 +1,276 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage{caption}
+
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts}
+\usepackage{tabularx}
+%\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{tikz}
+\usepackage{upquote}
+
+\usepackage{latexsym}
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+%\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\newtheorem{definition}{Definition}
+\newtheorem*{lemma}{Lemma}
+
+%\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode} %wt's template
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\title{	
+\normalfont \normalsize
+%\textsc{university, school or department name} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Assignment1 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Bro.Huang's Group} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 1}
+\subsection*{1.1}
+\begin{definition}
+    A set of $X \subseteq E$ is $good$ if $ \exists$ a MST $T = (V, F)$ of $G$, so that $X \subseteq F$.
+\end{definition}
+\begin{lemma}[Cut Lemma]
+    Suppose $X \subseteq E$ is good, but $(V, X)$ is not connected. There is a cut $S$, $V \setminus S$ of $X$. No edge in $X$ crosses between $S$ and $V \setminus S$. Let $e$ be an edge of minimum weight crossing $S$ and $V \setminus S$. Then $X \cup \{e\}$ is good.
+\end{lemma}
+\begin{figure}
+\begin{center}
+\includegraphics[width = 0.6\textwidth]{ssw.jpg}
+\caption{Picture for the proof of Cut Lemma}
+\end{center}
+\end{figure}
+\begin{proof}[Proof of Cut Lemma]
+    Suppose $X \subseteq E$ is good and $\exists$ a MST $T = (V, F)$ so that $X \subseteq F$.
+    \begin{enumerate}
+        \item If $e \in T$:
+            Then the lemma is proofed.
+        \item If $e \not \in T$:
+            Then there exists an edge $e' \in F$ and $e'$ is the only edge in $F$ that crosses the cut. From the cut lemma, $e$ has the minimum weight crossing the cut. So we have
+            \begin{equation}
+                w(e) \leq w(e')
+            \end{equation}
+            Since both $e$ and $e'$ cross the cut, if we replace edge $e'$ with $e$, it will not result in any cycles. So the graph $T - e' + e$ is also a tree. Since $T$ is a MST of $G$, its weight $w(T)$ must be no more than $w(T + e - e')$. So we have
+            \begin{equation}
+                w(T) \leq w(T + e - e') = w(T) + w(e) - w(e')
+            \end{equation}
+            from which we can have
+            \begin{equation}
+                w(e) \geq w(e')
+            \end{equation}
+            So, from the above equations, we can conclude that
+            \begin{equation}
+                w(e) = w(e')
+            \end{equation}
+            Since we have proofed that $T - e' + e$ is also a tree, we can see that $T - e' + e$ is a MST of $G$. So $X \cup \{e\}$ is good because it belongs to the set of edges of the MST $T - e' + e$.
+    \end{enumerate}
+    After all, we proofed the cut lemma.
+\end{proof}
+
+\subsection*{1.2}
+\begin{proof}[Proof of problem 1.2]
+    From the description about $X$ and $X \cup \{e\}$ in the lemma, there exists a MST $T = (V, F)$ so that $X \subseteq F$. There also exists a MST $T' = (V, F')$ so that $X \cup \{e\} \subseteq F'$.
+    
+    Suppose $e$ connects two vertices $u, v \in V$. Consider about the vertices in the set $V'= V \setminus \{v_1, v_2\}$. Each vertex $v \in V'$ is connected with $v_1$ by a set of edges in $F'$ because $T'$ is a MST. Define a set $S = \{v_1\}$. For each vertex $v \in V'$, if it can reach $v_1$ without visiting $v_2$ by edges in $F'$, then put it into the set $S$. It is obviously that $v_2$ is not in $S$ since it can only visit$v_1$ by $e$. Then $S, V\setminus S$ is a cut meeting the question. Both $(S, F')$ and $(V \setminus S, F')$ are connected graph. So that
+    \begin{enumerate}
+        \item Suppose there is an edge $e' \in X$ such that $e' \neq e$ and $e'$ crosses $S$ and $V \setminus S$. But both $(S, F')$ and $(V \ S, F')$ are connected graphs and they are connected by edge $e$. So there exists a cycle by $X \cup \{e\}$ which shows that $X \cup \{e\}$ is not good. It is contrast with the condition that $X \cup \{e\}$ is good. So no edge from $X$ crosses this cut.
+
+        \item Suppose $\exists e'' \in E$ such that $w(e'') < w(e)$ and $e''$ crosses the cut $S$ and $V \setminus S$. According to the proof of the Cut Lemma, $(T' \cup \{e''\})\setminus \{e\}$ will be a MST with smaller weight than $T'$. But, however, from the definition, $T'$ is a MST of $G$ which yields a contradiction. So $e$ is a minimum weight edge of $G$ crossing this cut.
+    \end{enumerate}
+\end{proof}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 2}
+\subsection*{2.1}
+    Example is shown in Figure 1.
+\begin{figure}
+ \begin{center}
+        \includegraphics[width = 0.9\textwidth]{wt}
+        \caption{Example when $c = 3$}
+ \end{center}
+\end{figure}
+\subsection*{2.2}
+    \begin{proof}[Proof of problem 2]
+    Since $T \subseteq G$, so $T_{c} \subseteq G_{c}$. Then:
+    \begin{enumerate}
+        \item When $u, v \in V$ are connected in $T_{c}$:\\
+            They are also connected in $G_{c}$ because $T_c \subseteq G_c$.
+
+        \item When $u,v \in V$ are connected in $G_{c}$:\\
+            Suppose $u, v$ are not connected in $T_{c}$. Let $S=\{x | x \in V \textrm{ and } x, u \textrm{ are connected in } T_c\}$, $S'=\{y | y \in V \textrm{ and } y, v \textrm{ are connected in } T_c\}$. Then there exists an edge $e = (x,y) (x \in S, y \in S')$ crossing $S$ and $S'$ whose weight is more than $c$. Since $u, v$ are connected in $G_{c}$, there exists an edge $e'=(x',y') (x' \in S, y' \in S')$ crossing $S$ and $S'$, whose weight is no more than $c$.
+
+            Add the edge $e'$ into $T$. We get a graph with one cycle $x \longrightarrow y \longrightarrow y' \longrightarrow x' \longrightarrow x$.
+Then we delete the edge $e$ on the certain cycle. We get a new spanning tree $T'$, whose total weight is less than $T$ which means that $T$ is not the minimum spanning tree of $G$. It is contradict with the assumption. So $u, v$ must be connected in $G_c$ when they are connected in $T_c$.
+    \end{enumerate}
+            Above all, $T_{c}$ and $G_{c}$ have exactly the same connected components.
+    \end{proof}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 3
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 3}
+\subsection*{3.1}
+Assume we have a graph
+$G~=~\{V,~E\},~V~=~\{1,~2,~3,~4\},~$ $E~=~\{(1,~2,~1),~(2,~3,~1),~(3,~1,~1),~(3,~4,~2)\}$ (Here, a triad $(a,~b,~c)$ means a edge with two endpoints $a$ and $b$ with value $c$).
+
+There are three minimum spanning tree for the graph:\\
+$T_1~=~\{V_1,~E_1\},~V_1~=~\{1,~2,~3,~4\},~$
+$E_1~=~\{(1,~2,~1),~(2,~3,~1),~(3,~4,~2)\}$\\
+$T_2~=~\{V_2,~E_2\},~V_2~=~\{1,~2,~3,~4\},~$\\
+$E_2~=~\{(1,~2,~1),~(3,~1,~1),~(3,~4,~2)\}$\\
+$T_3~=~\{V_1,~E_1\},~V_3~=~\{1,~2,~3,~4\},~$\\
+$E_3~=~\{(2,~3,~1),~(3,~1,~1),~(3,~4,~2)\}$\\
+It is easy to see:\\
+$m_0(T_1)~=~m_0(T_2)~=~m_0(T_3)~=~0$\\
+$m_1(T_1)~=~m_1(T_2)~=~m_1(T_3)~=~2$\\
+$m_2(T_1)~=~m_2(T_2)~=~m_2(T_3)~=~3$\\
+
+\subsection*{3.2}
+\begin{proof}[Proof of problem 3]
+Due to lemma 2, we know $T_c$ (defined in Definition 1) and $T'_c$ have exactly the same connected component. \\
+Assume that there are $X$ connected components, and the $i-th$ one has $A_i$ vertices. Every connected component is a tree because both $T$ and $T'$ are minimum spanning tree. So, the $i-th$ connected component has $|A_i|-1$ edges. So we can calculate the sum of edges S:
+\begin{equation}
+S~=~\sum_{i=1}^{X}(A_i-1)~=~\sum_{i=1}^{X}(A_i)-X~=~|V|-X
+\end{equation}
+where $|V|$ means the number of vertices in the graph. So $m_c(T) = |V| - X = m_c(T')$.
+
+\end{proof}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 4
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 4}
+
+\begin{proof}[Proof of problem 4]
+We use the proof by contradiction.
+
+Suppose we finally have more than one different minimum spanning trees. We consider the edges of two minimum spanning trees by the order of weight. 
+Suppose that the first minimum spanning tree's edges' sequence is $a_{1}$$a_{2}$$a_{3}$...$a_{n}$. The second minimum spanning tree's edges' sequence is $a_{1}$$a_{2}$...$a_{k-1}$$b_{k}$...$b_{n}$.The $b_k$ is the first different edge.Without loss of generality,we can assume $b_{k}$'s weight is larger than $a_{k}$'s since all the weights are different . But by Kruskal's algorithm,$a_{k}$ will be put in the minimum spanning tree earlier than $b_{k}$ without causing a cycle. So there must be exactly one minimum spanning tree!
+\end{proof}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 5
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 5}
+\begin{figure}
+\begin{center}
+        \includegraphics[width=0.5\textwidth]{ssw.png}
+        \caption{Multigraph in problem 5}
+ \end{center}
+\end{figure}
+Consider the left graph as $G_1 = (V_1, E_1)$ in which $V_1 = \{A, B, C\}$ and $E_1 = \{AB, BC, AC\}$.
+It has 3 MSTs: $(V_1, \{AB, AC\}), (V_1, \{AB, BC\}), (V_1, \{BC, AC\})$.
+In $G_1$, $AC$ has three edges while $AB$ and $BC$ each has one edge. So the total number of MST of $G_1$ is $3 + 1 + 3 = 7$.
+
+Consider the right graph as $G_2 = (V_2, E_2)$ in which $V_2 = \{D, E, F, G\}$ and $E_2 = \{DE, EF, FG, DG\}$.
+It has 4 MSTs: $(V_2, \{DG, DE, EF\}), (V_2, \{DG, DE, GF\}), (V_2, \{DG, GF, FE\}), (V_2, \{DE, EF, FG\})$.
+In $G_2$, DG has two edges while the others each has one edge. So the total number of MST of $G_2$ is $2 + 2 + 2 + 1 = 7$.
+
+According to multiplication principle, the total number of spanning forests is $7 \times 7 = 49$.
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 6
+%----------------------------------------------------------------------------------------
+
+\section*{Problem 6}
+
+	   \begin{definition}
+			For a weighted graph $G = (V, E)$, Let $W$ represent the set of the weights of all the edges in graph $G$. We have
+				\begin{displaymath}
+					W := \{w(e) \mid e \in E(G)\}
+				\end{displaymath}
+			and let $w_i$ be the ith smallest element in $W$ for all $i$ in $\mid W \mid$.
+		\end{definition}
+		\begin{definition}
+			For every vertice in $V$, let $group(v_i) := $ the group that vertice $v_i$ belongs to, for all vertices in $V$. At the beginning, for every $v_i \in V$, $group(v_i) = i$.
+		\end{definition}
+		\begin{lemma}[Selection Lemma]
+			\label{lemma:add}
+            No matter how to choose a set of edges $\{w(e) = w_0 \mid e \in E\}$ and add it to the current graph, adding all the edges $\{e \mid e \in E \textrm{ and } w(e) = w_0\}$ to the current graph and merging all the connected groups after having chosen the set will result in the same final graph.
+		\end{lemma}
+		\begin{proof}[Proof of the Selection Lemma]
+			From Lemma 4 in exercise 1.3, to construct a MST, the number of chosen edges with the same weight is constant. Pick a set of edges $P = \{e \in E \mid w(e) = w_0\}$. Then we can have a set $A = \{e \in E \mid w(e) = w_k \textrm{ and } e \not\in P\}$. It is required that $\mid P \mid$ is the maximum number of edges with weight $w_0$ that can occur in a MST. Merge all the groups that are connected by all edges in $P$. After adding $P$ to the current graph and merging the connected groups, since adding any $e_0 \in A$ will result in a cycle, the two vertices $u, v \in V$ that are connected by $e_0$ must have been connected now. So $u, v$ are in the same group, which means adding $e_0$ to the current graph will not change anything. Then we can add all the edges in $A$ to the current graph with no harm at all. So it is obviously that no matter how to pick the set $P$, the graph will be the same at last after adding all edges in $P \cup A$ to the current graph and merging the connected groups.
+		\end{proof}
+		\begin{proof}[Proof of Problem 6]
+		Let $n_i$ be the number of minimum spanning trees of $G$ when $\mid W \mid = i$. Let $Calc(H)$ be the polynomial-time algorithm that computes the number of spanning forests of $H$.
+		\begin{enumerate}%[1)]
+		\item $W = \emptyset$ \\ In this case, $n_0 = 0$.
+		\item $\mid W \mid = 1$ \\ Since all the edges in $E$ have the same weight, it is obviously that $n_1 = Calc(G)$. The time to calculate it is polynomial.
+		\item Suppose we can already calculate the number of minimum spanning trees with $\mid W \mid = k$ in polynomial-time. Now consider how to calculate the number when $\mid W \mid = k + 1$.
+		
+			By using the Selection Lemma, we can first add all edges with weight $w_k$ to the current graph and merge the connected groups. After that, the number of edges connecting different groups in the graph is $0$. For every edge $e \in E \textrm{ and } w(e) = w_{k+1}$, supposing that it connects $u, v \in V$, add an edge connecting $group(u)$ and $group(v)$ to the current graph if $group(u) \neq group(v)$. Then the number of spanning forests for this current graph is $Calc(\textrm{current graph})$. So the number of MST of $G$ when $\mid W \mid = k + 1$ is
+			\begin{eqnarray}
+				n_{k + 1} = n_k \times Calc(\textrm{current graph})
+			\end{eqnarray}
+			The time to calculate $n_k$ is already polynomial and the time it takes to calculate $Calc(\textrm{current graph})$ is polynomial too. Disregarding of the time it takes to merge the groups, the time we need to calculate $n_{k + 1}$ is polynomial.
+		\end{enumerate}
+		
+		After all, for each vertice $v \in V$, it will be merged to another group for no more than $log(\mid V \mid)$ times. So the overall time for merging is $O(\mid V \mid log(\mid V \mid))$ and it obviously will take polynomial time. The proof above shows that the time to calculate the number of MST is polynomial disregarding merging. So the time it takes to solve this problem is polynomial.
+	\end{proof}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

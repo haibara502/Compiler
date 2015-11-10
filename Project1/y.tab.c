@@ -67,10 +67,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include "require.h"
 FILE *INPUT, *OUTPUT;
+struct SelfType nullType;
 
-#line 74 "y.tab.c" /* yacc.c:339  */
+#line 75 "y.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -166,18 +167,11 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 10 "syntax.y" /* yacc.c:355  */
+#line 11 "syntax.y" /* yacc.c:355  */
 
-	struct self_type
-	{
-		YYSTYPE *left, *right;
-		int value;
-		char symbol[20];	
-		char content[20];
-		int line;
-	} MYTYPE;
+	struct SelfType MYTYPE;
 
-#line 181 "y.tab.c" /* yacc.c:355  */
+#line 175 "y.tab.c" /* yacc.c:355  */
 };
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
@@ -192,7 +186,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 196 "y.tab.c" /* yacc.c:358  */
+#line 190 "y.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -492,12 +486,12 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    71,    71,    74,    77,    78,    79,    80,    83,    84,
-      87,    88,    91,    92,    95,    96,    99,   100,   101,   104,
-     105,   108,   109,   110,   113,   116,   117,   120,   121,   122,
-     123,   124,   125,   126,   129,   130,   133,   134,   137,   138,
-     141,   142,   145,   146,   149,   150,   151,   152,   153,   154,
-     155,   156,   157,   158,   161,   162,   165,   166
+       0,    65,    65,    68,    71,    72,    73,    74,    77,    78,
+      81,    82,    85,    86,    89,    90,    93,    94,    95,    98,
+      99,   102,   103,   104,   107,   110,   111,   114,   115,   116,
+     117,   118,   119,   120,   123,   124,   127,   128,   131,   132,
+     135,   136,   139,   140,   143,   144,   145,   146,   147,   148,
+     149,   150,   151,   152,   155,   156,   159,   160
 };
 #endif
 
@@ -1358,343 +1352,343 @@ yyreduce:
   switch (yyn)
     {
         case 2:
-#line 71 "syntax.y" /* yacc.c:1646  */
-    {extern init((yyval.YYSTYPE), "START", 1, (yyvsp[0].YYSTYPE)); extern print_tree((yyval.YYSTYPE).left, 0);}
-#line 1364 "y.tab.c" /* yacc.c:1646  */
+#line 65 "syntax.y" /* yacc.c:1646  */
+    {	pack1(&((yyval.MYTYPE)), "START", &((yyvsp[0].MYTYPE))); print_tree((yyval.MYTYPE), 0); }
+#line 1358 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
-#line 74 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "PROGRAM", 1, (yyvsp[0].YYSTYPE));}
-#line 1370 "y.tab.c" /* yacc.c:1646  */
+#line 68 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "PROGRAM", &((yyvsp[0].MYTYPE))); }
+#line 1364 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
-#line 77 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXTDEFS", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1376 "y.tab.c" /* yacc.c:1646  */
+#line 71 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "EXTDEFS", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE))); }
+#line 1370 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 78 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXTDEFS", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1382 "y.tab.c" /* yacc.c:1646  */
+#line 72 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "EXTDEFS", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE))); }
+#line 1376 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 79 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXTDEFS", 0);}
-#line 1388 "y.tab.c" /* yacc.c:1646  */
+#line 73 "syntax.y" /* yacc.c:1646  */
+    { init(&((yyval.MYTYPE)), "EXTDEFS", NULL);}
+#line 1382 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
-#line 80 "syntax.y" /* yacc.c:1646  */
+#line 74 "syntax.y" /* yacc.c:1646  */
     {}
-#line 1394 "y.tab.c" /* yacc.c:1646  */
+#line 1388 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 83 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXTDEF", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1400 "y.tab.c" /* yacc.c:1646  */
+#line 77 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "EXTDEF", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1394 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 84 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXTDEF", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1406 "y.tab.c" /* yacc.c:1646  */
+#line 78 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "EXTDEF", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1400 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
-#line 87 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "SPEC", 1, (yyvsp[0].YYSTYPE));}
-#line 1412 "y.tab.c" /* yacc.c:1646  */
+#line 81 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "SPEC", &((yyvsp[0].MYTYPE))); }
+#line 1406 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 88 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "SPEC", 1, (yyvsp[0].YYSTYPE));}
-#line 1418 "y.tab.c" /* yacc.c:1646  */
+#line 82 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "SPEC", &((yyvsp[0].MYTYPE))); }
+#line 1412 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 91 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STSPEC", 5, (yyvsp[-4].YYSTYPE), (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1424 "y.tab.c" /* yacc.c:1646  */
+#line 85 "syntax.y" /* yacc.c:1646  */
+    { pack5(&((yyval.MYTYPE)), "STSPEC", &((yyvsp[-4].MYTYPE)), &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1418 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
-#line 92 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STSPEC", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1430 "y.tab.c" /* yacc.c:1646  */
+#line 86 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "STSPEC", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE))); }
+#line 1424 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 95 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "OPTTAG", 1, (yyvsp[0].YYSTYPE));}
-#line 1436 "y.tab.c" /* yacc.c:1646  */
+#line 89 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "OPTTAG", &((yyvsp[0].MYTYPE)));}
+#line 1430 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 96 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "OPTTAG", 0);}
-#line 1442 "y.tab.c" /* yacc.c:1646  */
+#line 90 "syntax.y" /* yacc.c:1646  */
+    {	init(&((yyval.MYTYPE)), "OPTTAG", NULL);}
+#line 1436 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 99 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "VAR", 1, (yyvsp[-1].YYSTYPE));}
-#line 1448 "y.tab.c" /* yacc.c:1646  */
+#line 93 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "VAR", &((yyvsp[-1].MYTYPE))); }
+#line 1442 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
-#line 100 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "VAR", 4, (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1454 "y.tab.c" /* yacc.c:1646  */
+#line 94 "syntax.y" /* yacc.c:1646  */
+    {pack4(&((yyval.MYTYPE)), "VAR", &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1448 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
-#line 101 "syntax.y" /* yacc.c:1646  */
+#line 95 "syntax.y" /* yacc.c:1646  */
     {}
-#line 1460 "y.tab.c" /* yacc.c:1646  */
+#line 1454 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
-#line 104 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "FUNC", 4, (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1466 "y.tab.c" /* yacc.c:1646  */
+#line 98 "syntax.y" /* yacc.c:1646  */
+    { pack4(&((yyval.MYTYPE)), "FUNC", &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1460 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
-#line 105 "syntax.y" /* yacc.c:1646  */
+#line 99 "syntax.y" /* yacc.c:1646  */
     {}
-#line 1472 "y.tab.c" /* yacc.c:1646  */
+#line 1466 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
-#line 108 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "PARAS", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1478 "y.tab.c" /* yacc.c:1646  */
+#line 102 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "PARAS", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1472 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
-#line 109 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "PARAS", 1, (yyvsp[0].YYSTYPE));}
-#line 1484 "y.tab.c" /* yacc.c:1646  */
+#line 103 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "PARAS", &((yyvsp[0].MYTYPE)));}
+#line 1478 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
-#line 110 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "PARAS", 0);}
-#line 1490 "y.tab.c" /* yacc.c:1646  */
+#line 104 "syntax.y" /* yacc.c:1646  */
+    {	init(&((yyval.MYTYPE)), "PARAS", NULL);}
+#line 1484 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 24:
-#line 113 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "PARA", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1496 "y.tab.c" /* yacc.c:1646  */
+#line 107 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "PARA", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE))); }
+#line 1490 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
-#line 116 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMTBLOCK", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1502 "y.tab.c" /* yacc.c:1646  */
+#line 110 "syntax.y" /* yacc.c:1646  */
+    {pack3(&((yyval.MYTYPE)), "STMTBLOCK", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1496 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
-#line 117 "syntax.y" /* yacc.c:1646  */
+#line 111 "syntax.y" /* yacc.c:1646  */
     {}
-#line 1508 "y.tab.c" /* yacc.c:1646  */
+#line 1502 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
-#line 120 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1514 "y.tab.c" /* yacc.c:1646  */
+#line 114 "syntax.y" /* yacc.c:1646  */
+    {pack2(&((yyval.MYTYPE)), "STMT", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1508 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
-#line 121 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 1, (yyvsp[0].YYSTYPE));}
-#line 1520 "y.tab.c" /* yacc.c:1646  */
+#line 115 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "STMT", &((yyvsp[0].MYTYPE)));	}
+#line 1514 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
-#line 122 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1526 "y.tab.c" /* yacc.c:1646  */
+#line 116 "syntax.y" /* yacc.c:1646  */
+    {	pack3(&((yyval.MYTYPE)), "STMT", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1520 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
-#line 123 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 6, (yyvsp[-5].YYSTYPE), (yyvsp[-4].YYSTYPE), (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1532 "y.tab.c" /* yacc.c:1646  */
+#line 117 "syntax.y" /* yacc.c:1646  */
+    {	pack6(&((yyval.MYTYPE)), "STMT", &((yyvsp[-5].MYTYPE)), &((yyvsp[-4].MYTYPE)), &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1526 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
-#line 124 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 9, (yyvsp[-8].YYSTYPE), (yyvsp[-7].YYSTYPE), (yyvsp[-6].YYSTYPE), (yyvsp[-5].YYSTYPE), (yyvsp[-4].YYSTYPE), (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1538 "y.tab.c" /* yacc.c:1646  */
+#line 118 "syntax.y" /* yacc.c:1646  */
+    {pack9(&((yyval.MYTYPE)), "STMT", &((yyvsp[-8].MYTYPE)), &((yyvsp[-7].MYTYPE)), &((yyvsp[-6].MYTYPE)), &((yyvsp[-5].MYTYPE)), &((yyvsp[-4].MYTYPE)), &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1532 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 32:
-#line 125 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1544 "y.tab.c" /* yacc.c:1646  */
+#line 119 "syntax.y" /* yacc.c:1646  */
+    {pack2(&((yyval.MYTYPE)), "STMT", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1538 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
-#line 126 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "STMT", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1550 "y.tab.c" /* yacc.c:1646  */
+#line 120 "syntax.y" /* yacc.c:1646  */
+    {pack2(&((yyval.MYTYPE)), "STMT", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1544 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 34:
-#line 129 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "ESTMT", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1556 "y.tab.c" /* yacc.c:1646  */
+#line 123 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "ESTMT", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1550 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 35:
-#line 130 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "ESTMT", 0);}
-#line 1562 "y.tab.c" /* yacc.c:1646  */
+#line 124 "syntax.y" /* yacc.c:1646  */
+    {	init(&((yyval.MYTYPE)), "ESTMT", NULL);}
+#line 1556 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 36:
-#line 133 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DEFS", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1568 "y.tab.c" /* yacc.c:1646  */
+#line 127 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "DEFS", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1562 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
-#line 134 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DEFS", 0);}
-#line 1574 "y.tab.c" /* yacc.c:1646  */
+#line 128 "syntax.y" /* yacc.c:1646  */
+    {	init(&((yyval.MYTYPE)), "DEFS", NULL);}
+#line 1568 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 38:
-#line 137 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DEF", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1580 "y.tab.c" /* yacc.c:1646  */
+#line 131 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "DEF", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1574 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 39:
-#line 138 "syntax.y" /* yacc.c:1646  */
+#line 132 "syntax.y" /* yacc.c:1646  */
     {}
-#line 1586 "y.tab.c" /* yacc.c:1646  */
+#line 1580 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 40:
-#line 141 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DECS", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1592 "y.tab.c" /* yacc.c:1646  */
+#line 135 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "DECS", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1586 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 41:
-#line 142 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DECS", 1, (yyvsp[0].YYSTYPE));}
-#line 1598 "y.tab.c" /* yacc.c:1646  */
+#line 136 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "DECS", &((yyvsp[0].MYTYPE)));}
+#line 1592 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 42:
-#line 145 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DEC", 1, (yyvsp[0].YYSTYPE));}
-#line 1604 "y.tab.c" /* yacc.c:1646  */
+#line 139 "syntax.y" /* yacc.c:1646  */
+    {	pack1(&((yyval.MYTYPE)), "DEC", &((yyvsp[0].MYTYPE)));}
+#line 1598 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 43:
-#line 146 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "DEC", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1610 "y.tab.c" /* yacc.c:1646  */
+#line 140 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "DEC", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1604 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 44:
-#line 149 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1616 "y.tab.c" /* yacc.c:1646  */
+#line 143 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "EXP", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1610 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 45:
-#line 150 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1622 "y.tab.c" /* yacc.c:1646  */
+#line 144 "syntax.y" /* yacc.c:1646  */
+    { pack2(&((yyval.MYTYPE)), "EXP", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE))); }
+#line 1616 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 46:
-#line 151 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1628 "y.tab.c" /* yacc.c:1646  */
+#line 145 "syntax.y" /* yacc.c:1646  */
+    {pack3(&((yyval.MYTYPE)), "EXP", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1622 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 47:
-#line 152 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 4, (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1634 "y.tab.c" /* yacc.c:1646  */
+#line 146 "syntax.y" /* yacc.c:1646  */
+    { pack4(&((yyval.MYTYPE)), "EXP", &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1628 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 48:
-#line 153 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 2, (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1640 "y.tab.c" /* yacc.c:1646  */
+#line 147 "syntax.y" /* yacc.c:1646  */
+    {	pack2(&((yyval.MYTYPE)), "EXP", &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1634 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 49:
-#line 154 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 4, (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1646 "y.tab.c" /* yacc.c:1646  */
+#line 148 "syntax.y" /* yacc.c:1646  */
+    {	pack4(&((yyval.MYTYPE)), "EXP", &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1640 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 50:
-#line 155 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 1, (yyvsp[0].YYSTYPE));}
-#line 1652 "y.tab.c" /* yacc.c:1646  */
+#line 149 "syntax.y" /* yacc.c:1646  */
+    { pack1(&((yyval.MYTYPE)), "EXP", &((yyvsp[0].MYTYPE)));}
+#line 1646 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 51:
-#line 156 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1658 "y.tab.c" /* yacc.c:1646  */
+#line 150 "syntax.y" /* yacc.c:1646  */
+    { pack3(&((yyval.MYTYPE)), "EXP", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1652 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 52:
-#line 157 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1664 "y.tab.c" /* yacc.c:1646  */
+#line 151 "syntax.y" /* yacc.c:1646  */
+    {	pack3(&((yyval.MYTYPE)), "EXP", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1658 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 53:
-#line 158 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "EXP", 0);}
-#line 1670 "y.tab.c" /* yacc.c:1646  */
+#line 152 "syntax.y" /* yacc.c:1646  */
+    {	init(&((yyval.MYTYPE)), "EXP", NULL);}
+#line 1664 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 54:
-#line 161 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "ARRS", 4, (yyvsp[-3].YYSTYPE), (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1676 "y.tab.c" /* yacc.c:1646  */
+#line 155 "syntax.y" /* yacc.c:1646  */
+    {pack4(&((yyval.MYTYPE)), "ARRS", &((yyvsp[-3].MYTYPE)), &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1670 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 55:
-#line 162 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "ARRS", 0);}
-#line 1682 "y.tab.c" /* yacc.c:1646  */
+#line 156 "syntax.y" /* yacc.c:1646  */
+    {init(&((yyval.MYTYPE)), "ARRS", NULL);}
+#line 1676 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 56:
-#line 165 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "ARGS", 3, (yyvsp[-2].YYSTYPE), (yyvsp[-1].YYSTYPE), (yyvsp[0].YYSTYPE));}
-#line 1688 "y.tab.c" /* yacc.c:1646  */
+#line 159 "syntax.y" /* yacc.c:1646  */
+    {pack3(&((yyval.MYTYPE)), "ARGS", &((yyvsp[-2].MYTYPE)), &((yyvsp[-1].MYTYPE)), &((yyvsp[0].MYTYPE)));}
+#line 1682 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 57:
-#line 166 "syntax.y" /* yacc.c:1646  */
-    {init((yyval.YYSTYPE), "ARGS", 1, (yyvsp[0].YYSTYPE));}
-#line 1694 "y.tab.c" /* yacc.c:1646  */
+#line 160 "syntax.y" /* yacc.c:1646  */
+    {	pack1(&((yyval.MYTYPE)), "ARGS", &((yyvsp[0].MYTYPE)));}
+#line 1688 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1698 "y.tab.c" /* yacc.c:1646  */
+#line 1692 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1922,69 +1916,95 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 168 "syntax.y" /* yacc.c:1906  */
+#line 162 "syntax.y" /* yacc.c:1906  */
 
 
-#include "lex.yy.c"
-
-void init(union YYSTYPE now, char* s, int number, union YYSTYPE *s1, union YYSTYPE *s2, union YYSTYPE *s3, union YYSTYPE *s4, union YYSTYPE *s5, union YYSTYPE *s6, union YYSTYPE *s7, union YYSTYPE *s8, union YYSTYPE *s9)
+void init(struct SelfType *now, char* s, struct SelfType *s1)
 {
-	sprintf(now -> MYTYPE.symbol, "%s", s);
-	now -> MYTYPE.left = now -> MYTYPE.right = NULL;
-	if (number == 0)
-	{
-		now -> MYTYPE.content[0] = 0;
-		return;
-	}
-	switch (number)
-	{
-		case 9: s8 -> MYTYPE.right = s9;
-		case 8: s7 -> MYTYPE.right = s8;
-		case 7: s6 -> MYTYPE.right = s7;
-		case 6: s5 -> MYTYPE.right = s6;
-		case 5: s4 -> MYTYPE.right = s5;
-		case 4: s3 -> MYTYPE.right = s4;
-		case 3: s2 -> MYTYPE.right = s3;
-		case 2: s1 -> MYTYPE.right = s2;
-		case 1: now -> MYTYPE.left = s1;
-	}
+	sprintf((*now).token, "%s", s);
+	(*now).left = s1;
 }
 
-void print_tree(union YYSTYPE *node, int depth)
+void Pack(struct SelfType **All, int number)
+{
+	int i = 0;
+	for (i = 0; i < number - 1; ++i)
+		(*All[i]).right = All[i + 1];
+}
+
+void pack1(struct SelfType *now, char* s, struct SelfType *son1)
+{
+	init(now, s, son1);
+}
+
+void pack2(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2)
+{
+	init(now, s, son1);
+	struct SelfType **All = (struct SelfType **) malloc(2 * sizeof(struct SelfType*));
+	All[0] = son1, All[1] = son2;
+	Pack(All, 2);
+}
+
+void pack3(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3)
+{
+	init(now, s, son1);
+	struct SelfType **All = (struct SelfType **) malloc(3 * sizeof(struct SelfType));
+	All[0] = son1, All[1] = son2, All[2] = son3;
+	Pack(All, 3);
+}
+
+void pack4(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4)
+{
+	init(now, s, son1);
+	struct SelfType **All = (struct SelfType **) malloc(4 * sizeof(struct SelfType));
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4;
+	Pack(All, 4);
+}
+
+void pack5(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4, struct SelfType *son5)
+{
+	init(now, s, son1);
+	struct SelfType **All = (struct SelfType **) malloc(5 * sizeof(struct SelfType));
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[5] = son5;
+	Pack(All, 5);
+}
+
+void pack6 (struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4, struct SelfType *son5, struct SelfType *son6)
+{
+	init(now, s, son1);
+	struct SelfType **All = (struct SelfType **) malloc(6 * sizeof(struct SelfType));
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[5] = son5, All[5] = son6;
+	Pack(All, 6);
+}
+
+void pack9(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4, struct SelfType *son5, struct SelfType *son6, struct SelfType *son7, struct SelfType *son8, struct SelfType *son9)
+{
+	init(now, s, son1);
+	struct SelfType **All = (struct SelfType **) malloc(9 * sizeof(struct SelfType));
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[5] = son5, All[5] = son6, All[6] = son7, All[7] = son8, All[8] = son9;
+	Pack(All, 9);
+}
+void print_tree(struct SelfType node, int depth)
 {
 	int i = 0;
 	for (; i < depth * 2; ++i)
 		fprintf(OUTPUT, "-");
-	fprintf(OUTPUT, "[%s : %s]\n", node -> MYTYPE.symbol, node -> MYTYPE.content);
-	if (node -> MYTYPE.left != NULL)
-		print_tree(node -> MYTYPE.left, depth + 1);
-	if (node -> MYTYPE.right != NULL)
-		print_tree(node -> MYTYPE.right, depth);
+	fprintf(OUTPUT, "[%s : %s]\n", node.token, node.content);
+	if (node.left != NULL)
+		print_tree(*((struct SelfType*) node.left), depth + 1);
+	if (node.right != NULL)
+		print_tree(*((struct SelfType*) node.right), depth);
 }
 
-void yyerror(char *s)
+void yyerror (char const *s)
 {
-	fprintf(stderr, "[line %d]: %s\n", yylval.MYTYPE.line, s);
-	switch (yychar)
-	{
-		case INT:
-			fprintf(stderr, "Error from integer.\n");
-			break;
-		case ID:
-			fprintf(stderr, "Error from ID.\n");
-			break;
-		case SEMI:		case COMMA:		case DOT:		case LP:		case RP:		case LB:		case RB:		case LC:	caseRC:		case STRUCT:		case RETURN:		case IF:		case ELSE:		case BREAK:		case CONT:		case FOR:
-			fprintf(stderr, "Error from %s.\n", yychar);
-			break;
-		case BINARYOP:		case UNARYOP:		case ASSIGNOP:		case EQUALOP:		case TYPE:
-			fprintf(stderr, "Error from %s.\n", yychar);
-			break;
-	}
+  fprintf (stderr, "%s\n", s);
 }
 
 void main(int argc, char* argv[])
 {
 	INPUT = fopen(argv[1], "r");
 	OUTPUT = fopen(argv[2], "w");
+		
 	yyparse();
 }
