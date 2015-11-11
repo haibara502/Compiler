@@ -1,0 +1,3163 @@
+athena@aMiao:~/Templates/Compiler/Project1$ ./parser fib.sc fib.out
+Starting parse
+Entering state 0
+Reading a token: TYPE int
+Next token is token TYPE ()
+Reducing stack by rule 4 (line 71):
+-> $$ = nterm EXTDEFS ()
+Stack now 0
+Entering state 3
+Next token is token TYPE ()
+Shifting token TYPE ()
+Entering state 10
+Reducing stack by rule 9 (line 80):
+   $1 = token TYPE ()
+-> $$ = nterm SPEC ()
+Stack now 0 3
+Entering state 20
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 39
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 43 (line 140):
+   $1 = token ID ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20
+Entering state 44
+Reducing stack by rule 40 (line 135):
+   $1 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20
+Entering state 43
+Next token is token LB ()
+syntax error
+Error: popping nterm DECS ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Next token is token LB ()
+Error: discarding token LB ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 4
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 60
+Reducing stack by rule 17 (line 94):
+   $1 = token error ()
+   $2 = token RB ()
+-> $$ = nterm VAR ()
+Stack now 0 3 20
+Entering state 41
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 41 (line 138):
+   $1 = nterm VAR ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20
+Entering state 44
+Reducing stack by rule 40 (line 135):
+   $1 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20
+Entering state 43
+Next token is token EQUALOP ()
+Error: popping nterm DECS ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Next token is token EQUALOP ()
+Error: discarding token EQUALOP ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: LC {
+Next token is token LC ()
+Error: discarding token LC ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 0
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Error: discarding token COMMA ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 1
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Error: discarding token COMMA ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 1
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Error: discarding token COMMA ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 1
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: RC }
+Next token is token RC ()
+Error: discarding token RC ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Error: discarding token SEMI ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: TYPE int
+Next token is token TYPE ()
+Error: discarding token TYPE ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: ID n
+Next token is token ID ()
+Error: discarding token ID ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Error: discarding token SEMI ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: TYPE int
+Next token is token TYPE ()
+Error: discarding token TYPE ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: ID MOD
+Next token is token ID ()
+Error: discarding token ID ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Error: discarding token EQUALOP ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 10007
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Error: discarding token SEMI ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: TYPE int
+Next token is token TYPE ()
+Error: discarding token TYPE ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: ID solve
+Next token is token ID ()
+Error: discarding token ID ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: LP (
+Next token is token LP ()
+Error: discarding token LP ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: TYPE int
+Next token is token TYPE ()
+Error: discarding token TYPE ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: ID x
+Next token is token ID ()
+Error: discarding token ID ()
+Error: popping token error ()
+Stack now 0 3 20
+Shifting token error ()
+Entering state 38
+Reading a token: RP )
+Next token is token RP ()
+Shifting token RP ()
+Entering state 59
+Reducing stack by rule 19 (line 98):
+   $1 = token error ()
+   $2 = token RP ()
+-> $$ = nterm FUNC ()
+Stack now 0 3 20
+Entering state 42
+Reading a token: LC {
+Next token is token LC ()
+Shifting token LC ()
+Entering state 12
+Reading a token: TYPE int
+Next token is token TYPE ()
+Reducing stack by rule 4 (line 71):
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Next token is token TYPE ()
+Shifting token TYPE ()
+Entering state 10
+Reducing stack by rule 9 (line 80):
+   $1 = token TYPE ()
+-> $$ = nterm SPEC ()
+Stack now 0 3 20 42 12 30
+Entering state 20
+Reading a token: ID p
+Next token is token ID ()
+Shifting token ID ()
+Entering state 39
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Reducing stack by rule 43 (line 140):
+   $1 = token ID ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20 42 12 30 20
+Entering state 44
+Reducing stack by rule 40 (line 135):
+   $1 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Entering state 43
+Next token is token COMMA ()
+Shifting token COMMA ()
+Entering state 67
+Reading a token: ID q
+Next token is token ID ()
+Shifting token ID ()
+Entering state 84
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Reducing stack by rule 43 (line 140):
+   $1 = token ID ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20 42 12 30 20 43 67
+Entering state 85
+Reducing stack by rule 39 (line 134):
+   $1 = nterm DECS ()
+   $2 = token COMMA ()
+   $3 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Entering state 43
+Next token is token COMMA ()
+Shifting token COMMA ()
+Entering state 67
+Reading a token: ID r
+Next token is token ID ()
+Shifting token ID ()
+Entering state 84
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Reducing stack by rule 43 (line 140):
+   $1 = token ID ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20 42 12 30 20 43 67
+Entering state 85
+Reducing stack by rule 39 (line 134):
+   $1 = nterm DECS ()
+   $2 = token COMMA ()
+   $3 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Entering state 43
+Next token is token COMMA ()
+Shifting token COMMA ()
+Entering state 67
+Reading a token: ID s
+Next token is token ID ()
+Shifting token ID ()
+Entering state 84
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 43 (line 140):
+   $1 = token ID ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20 42 12 30 20 43 67
+Entering state 85
+Reducing stack by rule 39 (line 134):
+   $1 = nterm DECS ()
+   $2 = token COMMA ()
+   $3 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Entering state 43
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 66
+Reducing stack by rule 6 (line 75):
+   $1 = nterm SPEC ()
+   $2 = nterm DECS ()
+   $3 = token SEMI ()
+-> $$ = nterm EXTDEF ()
+Stack now 0 3 20 42 12 30
+Entering state 19
+Reducing stack by rule 2 (line 69):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm EXTDEF ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Reading a token: TYPE int
+Next token is token TYPE ()
+Shifting token TYPE ()
+Entering state 10
+Reducing stack by rule 9 (line 80):
+   $1 = token TYPE ()
+-> $$ = nterm SPEC ()
+Stack now 0 3 20 42 12 30
+Entering state 20
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 39
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 43 (line 140):
+   $1 = token ID ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20 42 12 30 20
+Entering state 44
+Reducing stack by rule 40 (line 135):
+   $1 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Entering state 43
+Next token is token LB ()
+syntax error
+Error: popping nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Next token is token LB ()
+Error: discarding token LB ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 2
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 60
+Reducing stack by rule 17 (line 94):
+   $1 = token error ()
+   $2 = token RB ()
+-> $$ = nterm VAR ()
+Stack now 0 3 20 42 12 30 20
+Entering state 41
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 41 (line 138):
+   $1 = nterm VAR ()
+-> $$ = nterm DEC ()
+Stack now 0 3 20 42 12 30 20
+Entering state 44
+Reducing stack by rule 40 (line 135):
+   $1 = nterm DEC ()
+-> $$ = nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Entering state 43
+Next token is token EQUALOP ()
+Error: popping nterm DECS ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Next token is token EQUALOP ()
+Error: discarding token EQUALOP ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: LC {
+Next token is token LC ()
+Error: discarding token LC ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 0
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: COMMA ,
+Next token is token COMMA ()
+Error: discarding token COMMA ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 1
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: RC }
+Next token is token RC ()
+Error: discarding token RC ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Error: discarding token SEMI ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: FOR for
+Next token is token FOR ()
+Error: discarding token FOR ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: LP (
+Next token is token LP ()
+Error: discarding token LP ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Error: discarding token SEMI ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: ID x
+Next token is token ID ()
+Error: discarding token ID ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Error: discarding token SEMI ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: ID x
+Next token is token ID ()
+Error: discarding token ID ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: ASSIGNOP >>=
+Next token is token ASSIGNOP ()
+Error: discarding token ASSIGNOP ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: INT 1
+Next token is token INT ()
+Error: discarding token INT ()
+Error: popping token error ()
+Stack now 0 3 20 42 12 30 20
+Shifting token error ()
+Entering state 38
+Reading a token: RP )
+Next token is token RP ()
+Shifting token RP ()
+Entering state 59
+Reducing stack by rule 19 (line 98):
+   $1 = token error ()
+   $2 = token RP ()
+-> $$ = nterm FUNC ()
+Stack now 0 3 20 42 12 30 20
+Entering state 42
+Reading a token: LC {
+Next token is token LC ()
+Shifting token LC ()
+Entering state 12
+Reading a token: IF if
+Next token is token IF ()
+Reducing stack by rule 4 (line 71):
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Next token is token IF ()
+Shifting token IF ()
+Entering state 15
+Reading a token: LP (
+Next token is token LP ()
+Shifting token LP ()
+Entering state 34
+Reading a token: ID x
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP &
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34
+Entering state 57
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 47
+Entering state 69
+Reading a token: RP )
+Next token is token RP ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34
+Entering state 57
+Next token is token RP ()
+Shifting token RP ()
+Entering state 76
+Reading a token: LC {
+Next token is token LC ()
+Shifting token LC ()
+Entering state 12
+Reading a token: ID p
+Next token is token ID ()
+Reducing stack by rule 4 (line 71):
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12
+Entering state 30
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8
+Entering state 27
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8
+Entering state 27
+Reading a token: BINARYOP +
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 2
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12
+Entering state 30
+Reading a token: ID q
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8
+Entering state 27
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8
+Entering state 27
+Reading a token: BINARYOP +
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 3
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12
+Entering state 30
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8
+Entering state 27
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID p
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP %
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID MOD
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8
+Entering state 27
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12
+Entering state 30
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 8
+Entering state 27
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID q
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP %
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID MOD
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47 8
+Entering state 27
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 12
+Entering state 30
+Reading a token: RC }
+Next token is token RC ()
+Shifting token RC ()
+Entering state 54
+Reducing stack by rule 24 (line 109):
+   $1 = token LC ()
+   $2 = nterm EXTDEFS ()
+   $3 = token RC ()
+-> $$ = nterm STMTBLOCK ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76
+Entering state 22
+Reducing stack by rule 27 (line 114):
+   $1 = nterm STMTBLOCK ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76
+Entering state 93
+Reading a token: ID p
+Next token is token ID ()
+Reducing stack by rule 34 (line 123):
+-> $$ = nterm ESTMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30 15 34 57 76 93
+Entering state 102
+Reducing stack by rule 29 (line 116):
+   $1 = token IF ()
+   $2 = token LP ()
+   $3 = nterm EXP ()
+   $4 = token RP ()
+   $5 = nterm STMT ()
+   $6 = nterm ESTMT ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Reading a token: BINARYOP +
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 2
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID q
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Reading a token: BINARYOP +
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 3
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID r
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 2
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Reading a token: BINARYOP +
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 3
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 2
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID s
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 2
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Reading a token: BINARYOP +
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 3
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 8
+Entering state 27
+Reading a token: BINARYOP *
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 3
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 69 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID p
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP %
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID MOD
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 1
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID q
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP %
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID MOD
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 2
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID r
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP %
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID MOD
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: ID mat
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 3
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 8
+Entering state 27
+Reading a token: ASSIGNOP =
+Next token is token EQUALOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token EQUALOP ()
+Shifting token EQUALOP ()
+Entering state 49
+Reading a token: ID s
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: BINARYOP %
+Next token is token BINARYOP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 8
+Entering state 27
+Next token is token BINARYOP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token BINARYOP ()
+Shifting token BINARYOP ()
+Entering state 47
+Reading a token: ID MOD
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47 8
+Entering state 27
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49 71 47
+Entering state 69
+Next token is token SEMI ()
+Reducing stack by rule 44 (line 143):
+   $1 = nterm EXP ()
+   $2 = token BINARYOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30 24 49
+Entering state 71
+Next token is token SEMI ()
+Reducing stack by rule 52 (line 151):
+   $1 = nterm EXP ()
+   $2 = token EQUALOP ()
+   $3 = nterm EXP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 24
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12 30 20 42 12
+Entering state 30
+Reading a token: RC }
+Next token is token RC ()
+Shifting token RC ()
+Entering state 54
+Reducing stack by rule 24 (line 109):
+   $1 = token LC ()
+   $2 = nterm EXTDEFS ()
+   $3 = token RC ()
+-> $$ = nterm STMTBLOCK ()
+Stack now 0 3 20 42 12 30 20 42
+Entering state 65
+Reducing stack by rule 7 (line 76):
+   $1 = nterm SPEC ()
+   $2 = nterm FUNC ()
+   $3 = nterm STMTBLOCK ()
+-> $$ = nterm EXTDEF ()
+Stack now 0 3 20 42 12 30
+Entering state 19
+Reducing stack by rule 2 (line 69):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm EXTDEF ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Reading a token: RETURN return
+Next token is token RETURN ()
+Shifting token RETURN ()
+Entering state 14
+Reading a token: ID ans
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LB [
+Next token is token LB ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 14 8
+Entering state 27
+Next token is token LB ()
+Shifting token LB ()
+Entering state 52
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 14 8 27 52
+Entering state 74
+Reading a token: RB ]
+Next token is token RB ()
+Shifting token RB ()
+Entering state 88
+Reducing stack by rule 54 (line 155):
+   $1 = nterm ARRS ()
+   $2 = token LB ()
+   $3 = nterm EXP ()
+   $4 = token RB ()
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 14 8
+Entering state 27
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 14
+Entering state 33
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 56
+Reducing stack by rule 28 (line 115):
+   $1 = token RETURN ()
+   $2 = nterm EXP ()
+   $3 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Reading a token: RC }
+Next token is token RC ()
+Shifting token RC ()
+Entering state 54
+Reducing stack by rule 24 (line 109):
+   $1 = token LC ()
+   $2 = nterm EXTDEFS ()
+   $3 = token RC ()
+-> $$ = nterm STMTBLOCK ()
+Stack now 0 3 20 42
+Entering state 65
+Reducing stack by rule 7 (line 76):
+   $1 = nterm SPEC ()
+   $2 = nterm FUNC ()
+   $3 = nterm STMTBLOCK ()
+-> $$ = nterm EXTDEF ()
+Stack now 0 3
+Entering state 19
+Reducing stack by rule 2 (line 69):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm EXTDEF ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0
+Entering state 3
+Reading a token: TYPE int
+Next token is token TYPE ()
+Shifting token TYPE ()
+Entering state 10
+Reducing stack by rule 9 (line 80):
+   $1 = token TYPE ()
+-> $$ = nterm SPEC ()
+Stack now 0 3
+Entering state 20
+Reading a token: ID main
+Next token is token ID ()
+Shifting token ID ()
+Entering state 39
+Reading a token: LP (
+Next token is token LP ()
+Shifting token LP ()
+Entering state 63
+Reading a token: RP )
+Next token is token RP ()
+Reducing stack by rule 22 (line 103):
+-> $$ = nterm PARAS ()
+Stack now 0 3 20 39 63
+Entering state 80
+Next token is token RP ()
+Shifting token RP ()
+Entering state 97
+Reducing stack by rule 18 (line 97):
+   $1 = token ID ()
+   $2 = token LP ()
+   $3 = nterm PARAS ()
+   $4 = token RP ()
+-> $$ = nterm FUNC ()
+Stack now 0 3 20
+Entering state 42
+Reading a token: LC {
+Next token is token LC ()
+Shifting token LC ()
+Entering state 12
+Reading a token: ID read
+Next token is token ID ()
+Reducing stack by rule 4 (line 71):
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LP (
+Next token is token LP ()
+Shifting token LP ()
+Entering state 26
+Reading a token: ID n
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: RP )
+Next token is token RP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 8 26 8
+Entering state 27
+Next token is token RP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 8 26
+Entering state 50
+Next token is token RP ()
+Reducing stack by rule 57 (line 160):
+   $1 = nterm EXP ()
+-> $$ = nterm ARGS ()
+Stack now 0 3 20 42 12 30 8 26
+Entering state 51
+Next token is token RP ()
+Shifting token RP ()
+Entering state 73
+Reducing stack by rule 47 (line 146):
+   $1 = token ID ()
+   $2 = token LP ()
+   $3 = nterm ARGS ()
+   $4 = token RP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30
+Entering state 24
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Reading a token: ID write
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LP (
+Next token is token LP ()
+Shifting token LP ()
+Entering state 26
+Reading a token: ID solve
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: LP (
+Next token is token LP ()
+Shifting token LP ()
+Entering state 26
+Reading a token: ID n
+Next token is token ID ()
+Shifting token ID ()
+Entering state 8
+Reading a token: RP )
+Next token is token RP ()
+Reducing stack by rule 55 (line 156):
+-> $$ = nterm ARRS ()
+Stack now 0 3 20 42 12 30 8 26 8 26 8
+Entering state 27
+Next token is token RP ()
+Reducing stack by rule 48 (line 147):
+   $1 = token ID ()
+   $2 = nterm ARRS ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 8 26 8 26
+Entering state 50
+Next token is token RP ()
+Reducing stack by rule 57 (line 160):
+   $1 = nterm EXP ()
+-> $$ = nterm ARGS ()
+Stack now 0 3 20 42 12 30 8 26 8 26
+Entering state 51
+Next token is token RP ()
+Shifting token RP ()
+Entering state 73
+Reducing stack by rule 47 (line 146):
+   $1 = token ID ()
+   $2 = token LP ()
+   $3 = nterm ARGS ()
+   $4 = token RP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 8 26
+Entering state 50
+Reading a token: RP )
+Next token is token RP ()
+Reducing stack by rule 57 (line 160):
+   $1 = nterm EXP ()
+-> $$ = nterm ARGS ()
+Stack now 0 3 20 42 12 30 8 26
+Entering state 51
+Next token is token RP ()
+Shifting token RP ()
+Entering state 73
+Reducing stack by rule 47 (line 146):
+   $1 = token ID ()
+   $2 = token LP ()
+   $3 = nterm ARGS ()
+   $4 = token RP ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30
+Entering state 24
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 45
+Reducing stack by rule 26 (line 113):
+   $1 = nterm EXP ()
+   $2 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Reading a token: RETURN return
+Next token is token RETURN ()
+Shifting token RETURN ()
+Entering state 14
+Reading a token: INT 0
+Next token is token INT ()
+Shifting token INT ()
+Entering state 7
+Reducing stack by rule 50 (line 149):
+   $1 = token INT ()
+-> $$ = nterm EXP ()
+Stack now 0 3 20 42 12 30 14
+Entering state 33
+Reading a token: SEMI ;
+Next token is token SEMI ()
+Shifting token SEMI ()
+Entering state 56
+Reducing stack by rule 28 (line 115):
+   $1 = token RETURN ()
+   $2 = nterm EXP ()
+   $3 = token SEMI ()
+-> $$ = nterm STMT ()
+Stack now 0 3 20 42 12 30
+Entering state 23
+Reducing stack by rule 3 (line 70):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm STMT ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0 3 20 42 12
+Entering state 30
+Reading a token: RC }
+Next token is token RC ()
+Shifting token RC ()
+Entering state 54
+Reducing stack by rule 24 (line 109):
+   $1 = token LC ()
+   $2 = nterm EXTDEFS ()
+   $3 = token RC ()
+-> $$ = nterm STMTBLOCK ()
+Stack now 0 3 20 42
+Entering state 65
+Reducing stack by rule 7 (line 76):
+   $1 = nterm SPEC ()
+   $2 = nterm FUNC ()
+   $3 = nterm STMTBLOCK ()
+-> $$ = nterm EXTDEF ()
+Stack now 0 3
+Entering state 19
+Reducing stack by rule 2 (line 69):
+   $1 = nterm EXTDEFS ()
+   $2 = nterm EXTDEF ()
+-> $$ = nterm EXTDEFS ()
+Stack now 0
+Entering state 3
+Reading a token: Now at end of input.
+Reducing stack by rule 1 (line 66):
+   $1 = nterm EXTDEFS ()
+-> $$ = nterm PROGRAM ()
+Stack now 0
+Entering state 2
+Now at end of input.
+Shifting token $end ()
+Entering state 5
+Stack now 0 2 5
+Cleanup: popping token $end ()
+Cleanup: popping nterm PROGRAM ()
+athena@aMiao:~/Templates/Compiler/Project1$ 
+

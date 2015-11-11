@@ -106,9 +106,9 @@ extern int yydebug;
 typedef union YYSTYPE YYSTYPE;
 union YYSTYPE
 {
-#line 11 "syntax.y" /* yacc.c:1909  */
+#line 13 "syntax.y" /* yacc.c:1909  */
 
-	struct SelfType MYTYPE;
+	struct SelfType* MYTYPE;
 
 #line 114 "y.tab.h" /* yacc.c:1909  */
 };

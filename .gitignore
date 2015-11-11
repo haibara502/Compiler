@@ -1,3 +1,9 @@
 *~
 *1.l
 *2.l
+*.sc
+*.o
+*.out
+*.pdf
+*.output
+*temp*

@@ -4,15 +4,16 @@
 #include <string.h>
 #include "require.h"
 FILE *INPUT, *OUTPUT;
-struct SelfType nullType;
+extern FILE * yyin;
+extern FILE * yyout;
+struct SelfType *first;
+#define YYDEBUG 1
 %}
-
 %union
 {
-	struct SelfType MYTYPE;
+	struct SelfType* MYTYPE;
 }
 
-%type <MYTYPE>  START
 %type <MYTYPE>  PROGRAM //Start token
 %type <MYTYPE>  EXTDEFS //Segements
 %type <MYTYPE>  EXTDEF //Segement
@@ -62,20 +63,18 @@ struct SelfType nullType;
 %right LOW_THAN_ERROR error TYPE STRUCT INT ID UNARYOP LC RETURN FOR CONT BREAK IF LP DOT BINARYOP ASSIGNOP EQUALOP HIGH_THAN_ERROR
 %%
 
-START 	: PROGRAM {	pack1(&($$), "START", &($1)); print_tree($$, 0); }
-		;
-		
-PROGRAM : EXTDEFS { pack1(&($$), "PROGRAM", &($1)); } /*Start the parser by expanding the program*/
+PROGRAM : EXTDEFS { pack1(&($$), "PROGRAM", &($1)); (*first) = (*$$);} /*Start the parser by expanding the program*/
 		;
 
 EXTDEFS : EXTDEFS EXTDEF { pack2(&($$), "EXTDEFS", &($1), &($2)); }/*e.g: int i = 1; */ 
 		| EXTDEFS STMT { pack2(&($$), "EXTDEFS", &($1), &($2)); }/*e.g: i = j + 1; */ %prec LOW_THAN_ERROR
-		| { init(&($$), "EXTDEFS", NULL);}/* empty */ %prec HIGH_THAN_ERROR
+		| { init(&($$), "", NULL);}/* empty */ %prec HIGH_THAN_ERROR
 		| error SEMI {}
 		;
 		
 EXTDEF	: SPEC DECS SEMI { pack3(&($$), "EXTDEF", &($1), &($2), &($3));}/*e.g: int i, j; struct Poi{int i, j;}point;*/
 		| SPEC FUNC STMTBLOCK { pack3(&($$), "EXTDEF", &($1), &($2), &($3));}/*e.g: int calc(){}*/
+		| SPEC SEMI {pack2(&($$), "EXTDEF", &($1), &($2));}
 		;
 		
 SPEC 	: TYPE { pack1(&($$), "SPEC", &($1)); }/*e.g: int */
@@ -87,10 +86,10 @@ STSPEC	: STRUCT OPTTAG LC DEFS RC { pack5(&($$), "STSPEC", &($1), &($2), &($3), 
 		;
 		
 OPTTAG	: ID { pack1(&($$), "OPTTAG", &($1));}/*e.g: Poi */
-		| {	init(&($$), "OPTTAG", NULL);}/* empty */
+		| {	init(&($$), "", NULL);}/* empty */
 		;
 		
-VAR		: ID ID { pack1(&($$), "VAR", &($1)); }/*e.g: i */
+VAR		: ID { pack1(&($$), "VAR", &($1)); }/*e.g: i */
 		| VAR LB INT RB {pack4(&($$), "VAR", &($1), &($2), &($3), &($4));}/*e.g: a[100] */
 		| error RB {}
 		;
@@ -101,7 +100,7 @@ FUNC	: ID LP PARAS RP { pack4(&($$), "FUNC", &($1), &($2), &($3), &($4));}/*e.g:
 		
 PARAS	: PARAS COMMA PARA { pack3(&($$), "PARAS", &($1), &($2), &($3));}/*e.g: int i, int j */
 		| PARA { pack1(&($$), "PARAS", &($1));}
-		| {	init(&($$), "PARAS", NULL);}/* empty */
+		| {	init(&($$), "", NULL);}/* empty */
 		;
 		
 PARA	: SPEC DEC { pack2(&($$), "PARA", &($1), &($2)); }/*e.g: int i = 1 */
@@ -121,11 +120,11 @@ STMT	: EXP SEMI {pack2(&($$), "STMT", &($1), &($2));}/*e.g: i = 1; */
 		;
 		
 ESTMT	: ELSE STMT { pack2(&($$), "ESTMT", &($1), &($2));}/* else i = 1; */ 
-		| {	init(&($$), "ESTMT", NULL);}/* empty */ %prec LOW
+		| {	init(&($$), "", NULL);}/* empty */ %prec LOW
 		;
 		
 DEFS	: DEFS DEF { pack2(&($$), "DEFS", &($1), &($2));}/* int i; int j; */
-		| {	init(&($$), "DEFS", NULL);}
+		| {	init(&($$), "", NULL);}
 		;
 		
 DEF		: SPEC DECS SEMI { pack3(&($$), "DEF", &($1), &($2), &($3));}/* int i = 1, j = 1, k; */
@@ -137,7 +136,8 @@ DECS	: DECS COMMA DEC { pack3(&($$), "DECS", &($1), &($2), &($3));}/* i = 1, j =
 		;
 		
 DEC		: VAR {	pack1(&($$), "DEC", &($1));}/*e.g: a[10] */
-		| ID EQUALOP EXP { pack3(&($$), "DEC", &($1), &($2), &($3));}/*e.g: i = 1 */ 
+		| VAR EQUALOP EXP {pack3(&($$), "DEC", &($1), &($2), &($3));}
+		| VAR EQUALOP LC ARGS RC {pack5(&($$), "EXP", &($1), &($2), &($3), &($4), &($5));}
 		;
 		
 EXP		: EXP BINARYOP EXP { pack3(&($$), "EXP", &($1), &($2), &($3));}/*e.g: 123 != 234 */
@@ -149,11 +149,12 @@ EXP		: EXP BINARYOP EXP { pack3(&($$), "EXP", &($1), &($2), &($3));}/*e.g: 123 !
 		| INT  { pack1(&($$), "EXP", &($1));}/*e.g: 123 */
 		| EXP ASSIGNOP EXP { pack3(&($$), "EXP", &($1), &($2), &($3));}/*e.g: i += 1 */
 		| EXP EQUALOP EXP {	pack3(&($$), "EXP", &($1), &($2), &($3));}/*e.g: i = 1 */
-		| {	init(&($$), "EXP", NULL);}/* empty */
+	//	| LC ARGS RC {pack3(&($$), "EXP", &($1), &($2), &($3));}
+		| {	init(&($$), "", NULL);}/* empty */
 		;
 		
 ARRS	: ARRS LB EXP RB {pack4(&($$), "ARRS", &($1), &($2), &($3), &($4));}/*e.g: [(a.value)][(b.value)] */ 
-		| {init(&($$), "ARRS", NULL);}/* empty */
+		| {init(&($$), "", NULL);}/* empty */
 		;
 		
 ARGS	: ARGS COMMA EXP {pack3(&($$), "ARGS", &($1), &($2), &($3));} /*e.g: a.cost, b.cost */
@@ -161,92 +162,123 @@ ARGS	: ARGS COMMA EXP {pack3(&($$), "ARGS", &($1), &($2), &($3));} /*e.g: a.cost
 		;
 %%
 
-void init(struct SelfType *now, char* s, struct SelfType *s1)
+void init(struct SelfType **now, char* s, struct SelfType **s1)
 {
-	sprintf((*now).token, "%s", s);
-	(*now).left = s1;
+	//printf("init:%s\n", s);
+	(*now) = (struct SelfType *) malloc(1 * sizeof(struct SelfType));
+	//printf("init malloc finish\n");
+	sprintf((*now) -> token, "%s", s);
+	sprintf((*now) -> content, "%s", s);
+	//printf("sprintf finish\n");
+	if (s1 != NULL)
+		(*now) -> left = *s1;
+	//printf("left finish \n");
 }
 
-void Pack(struct SelfType **All, int number)
+void Pack(struct SelfType ***All, int number)
 {
+	//printf("in pack\n");
 	int i = 0;
 	for (i = 0; i < number - 1; ++i)
-		(*All[i]).right = All[i + 1];
+	{
+		//printf("%d\n", i);
+		(*All[i]) -> right = *All[i + 1];
+	}
+	//printf("out pack\n");
 }
 
-void pack1(struct SelfType *now, char* s, struct SelfType *son1)
+void pack1(struct SelfType **now, char* s, struct SelfType **son1)
 {
+	//printf("in pack1\n");
+	//printf("now : %s\n", s);
 	init(now, s, son1);
+	//printf("after now : %s\n", (*now) -> token);
+	//printf("out pack1\n");
 }
 
-void pack2(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2)
+void pack2(struct SelfType **now, char* s, struct SelfType **son1, struct SelfType **son2)
 {
 	init(now, s, son1);
-	struct SelfType **All = (struct SelfType **) malloc(2 * sizeof(struct SelfType*));
+	struct SelfType ***All = (struct SelfType ***) malloc(2 * sizeof(struct SelfType**));
 	All[0] = son1, All[1] = son2;
 	Pack(All, 2);
 }
 
-void pack3(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3)
+void pack3(struct SelfType **now, char* s, struct SelfType **son1, struct SelfType **son2, struct SelfType **son3)
 {
 	init(now, s, son1);
-	struct SelfType **All = (struct SelfType **) malloc(3 * sizeof(struct SelfType));
+	struct SelfType ***All = (struct SelfType ***) malloc(3 * sizeof(struct SelfType**));
 	All[0] = son1, All[1] = son2, All[2] = son3;
 	Pack(All, 3);
 }
 
-void pack4(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4)
+void pack4(struct SelfType **now, char* s, struct SelfType **son1, struct SelfType **son2, struct SelfType **son3, struct SelfType **son4)
 {
 	init(now, s, son1);
-	struct SelfType **All = (struct SelfType **) malloc(4 * sizeof(struct SelfType));
+	struct SelfType ***All = (struct SelfType ***) malloc(4 * sizeof(struct SelfType**));
 	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4;
 	Pack(All, 4);
 }
 
-void pack5(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4, struct SelfType *son5)
+void pack5(struct SelfType **now, char* s, struct SelfType **son1, struct SelfType **son2, struct SelfType **son3, struct SelfType **son4, struct SelfType **son5)
 {
 	init(now, s, son1);
-	struct SelfType **All = (struct SelfType **) malloc(5 * sizeof(struct SelfType));
-	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[5] = son5;
+	struct SelfType ***All = (struct SelfType ***) malloc(5 * sizeof(struct SelfType**));
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[4] = son5;
 	Pack(All, 5);
 }
 
-void pack6 (struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4, struct SelfType *son5, struct SelfType *son6)
+void pack6 (struct SelfType **now, char* s, struct SelfType **son1, struct SelfType **son2, struct SelfType **son3, struct SelfType **son4, struct SelfType **son5, struct SelfType **son6)
 {
+	//printf("pack6\n");
 	init(now, s, son1);
-	struct SelfType **All = (struct SelfType **) malloc(6 * sizeof(struct SelfType));
-	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[5] = son5, All[5] = son6;
+	//printf("init finish\n");
+	struct SelfType ***All = (struct SelfType ***) malloc(6 * sizeof(struct SelfType**));
+	//printf("malloc finish\n");
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[4] = son5, All[5] = son6;
+	//printf("All finish\n");
 	Pack(All, 6);
+	//printf("Pack finish\n");
 }
 
-void pack9(struct SelfType *now, char* s, struct SelfType *son1, struct SelfType *son2, struct SelfType *son3, struct SelfType *son4, struct SelfType *son5, struct SelfType *son6, struct SelfType *son7, struct SelfType *son8, struct SelfType *son9)
+void pack9(struct SelfType **now, char* s, struct SelfType **son1, struct SelfType **son2, struct SelfType **son3, struct SelfType **son4, struct SelfType **son5, struct SelfType **son6, struct SelfType **son7, struct SelfType **son8, struct SelfType **son9)
 {
 	init(now, s, son1);
-	struct SelfType **All = (struct SelfType **) malloc(9 * sizeof(struct SelfType));
-	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[5] = son5, All[5] = son6, All[6] = son7, All[7] = son8, All[8] = son9;
+	struct SelfType ***All = (struct SelfType ***) malloc(9 * sizeof(struct SelfType**));
+	All[0] = son1, All[1] = son2, All[2] = son3, All[3] = son4, All[4] = son5, All[5] = son6, All[6] = son7, All[7] = son8, All[8] = son9;
 	Pack(All, 9);
 }
-void print_tree(struct SelfType node, int depth)
+void print_tree(struct SelfType *node, int depth)
 {
-	int i = 0;
-	for (; i < depth * 2; ++i)
-		fprintf(OUTPUT, "-");
-	fprintf(OUTPUT, "[%s : %s]\n", node.token, node.content);
-	if (node.left != NULL)
-		print_tree(*((struct SelfType*) node.left), depth + 1);
-	if (node.right != NULL)
-		print_tree(*((struct SelfType*) node.right), depth);
+	if (strlen(node -> content) != 0)
+	{
+		int i = 0;
+		for (; i < depth * 2; ++i)
+			fprintf(OUTPUT, "-");
+		//printf("tree %s %s %d\n", node -> token, node -> content, depth);
+		fprintf(OUTPUT, "[%s %s]\n", node -> token, node -> content);
+	}
+	if (node -> left != NULL)
+		print_tree((struct SelfType*) node -> left, depth + 1);
+	if (node -> right != NULL)
+		print_tree((struct SelfType*) node -> right, depth);
 }
 
 void yyerror (char const *s)
 {
-  fprintf (stderr, "%s\n", s);
+	fprintf (stderr, "%s\n", s);
 }
 
 void main(int argc, char* argv[])
 {
+	#if YYDEBUG
+        yydebug = 1;
+    #endif
 	INPUT = fopen(argv[1], "r");
-	OUTPUT = fopen(argv[2], "w");
-		
+	OUTPUT = fopen(argv[2], "w");		
+	yyin = INPUT;
+	first = (struct SelfType *) malloc(1 * sizeof(struct SelfType));
 	yyparse();
+	print_tree(first, 0);
+	fclose(OUTPUT);
 }

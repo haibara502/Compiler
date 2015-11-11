@@ -11,4 +11,4 @@ y.tab.o: y.tab.c
 	gcc -c y.tab.c -o y.tab.o
 
 y.tab.c y.tab.h: syntax.y
-	yacc -d syntax.y
+	yacc -d --verbose syntax.y

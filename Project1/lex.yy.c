@@ -377,16 +377,16 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[76] =
+static yyconst flex_int16_t yy_accept[80] =
     {   0,
         0,    0,   27,   26,    1,    2,   23,   22,   22,   11,
        12,   22,   20,   22,   21,    3,    3,   19,   22,   25,
        22,   18,   13,   14,   18,   18,   18,   18,   18,   18,
-       18,   15,   22,   16,   23,   22,   24,   23,    3,    0,
-        3,    3,   22,   18,   18,   18,   18,   18,   18,    6,
-       18,   18,   18,   18,   18,   18,   10,   17,   18,   18,
-       18,   18,    7,   18,   18,    8,   18,   18,   18,   18,
-        5,    4,   18,    9,    0
+       18,   15,   22,   16,   23,   22,   24,   23,    0,    3,
+        3,    0,    3,   22,   18,   18,   18,   18,   18,   18,
+        6,   18,   18,   18,    3,    3,   18,   18,   18,   10,
+       17,   18,   18,    3,   18,   18,    7,   18,   18,    8,
+       18,   18,   18,   18,    5,    4,   18,    9,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -396,15 +396,15 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    2,    4,    1,    1,    1,    5,    6,    1,    7,
         8,    9,   10,   11,   12,   13,   14,   15,   16,   16,
-       16,   16,   16,   16,   16,   16,   16,    1,   17,   18,
-       19,   20,    1,    1,   21,   21,   21,   21,   21,   21,
-       21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
-       21,   21,   21,   21,   21,   21,   21,   22,   21,   21,
-       23,    1,   24,   25,   26,    1,   27,   28,   29,   21,
+       16,   16,   16,   16,   16,   17,   17,    1,   18,   19,
+       20,   21,    1,    1,   22,   22,   22,   22,   22,   22,
+       23,   23,   23,   23,   23,   23,   23,   23,   23,   23,
+       23,   23,   23,   23,   23,   23,   23,   24,   23,   23,
+       25,    1,   26,   27,   28,    1,   29,   30,   31,   23,
 
-       30,   31,   21,   21,   32,   21,   33,   34,   21,   35,
-       36,   21,   21,   37,   38,   39,   40,   21,   21,   41,
-       21,   21,   42,   43,   44,   45,    1,    1,    1,    1,
+       32,   33,   23,   23,   34,   23,   35,   36,   23,   37,
+       38,   23,   23,   39,   40,   41,   42,   23,   23,   43,
+       23,   23,   44,   45,   46,   47,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -421,95 +421,105 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int32_t yy_meta[46] =
+static yyconst flex_int32_t yy_meta[48] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    2,    2,    1,    1,    1,    1,
-        2,    2,    1,    1,    1,    2,    2,    2,    2,    2,
+        1,    1,    1,    1,    2,    2,    2,    1,    1,    1,
+        1,    2,    2,    2,    1,    1,    1,    2,    2,    2,
         2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
-        2,    1,    1,    1,    1
+        2,    2,    2,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int16_t yy_base[78] =
+static yyconst flex_int16_t yy_base[82] =
     {   0,
-        0,    0,  118,  185,  185,  185,   91,   79,   40,  185,
-      185,   37,  185,   36,  185,   35,   37,  185,   42,   77,
-       43,   49,  185,  185,   51,   53,   56,   58,   62,   65,
-       67,  185,   56,  185,  185,  185,  185,  185,   69,   71,
-       76,   85,   60,    0,   87,   89,   23,   76,   78,   77,
-       85,   86,   91,   96,   98,  104,  101,  107,  109,  110,
-      120,  125,  112,  117,  130,  127,  132,  133,  135,  138,
-      140,  141,  149,  146,  185,   68,   47
+        0,    0,  119,  215,  215,  215,   85,   78,   42,  215,
+      215,   39,  215,   38,  215,   36,   48,  215,   37,   73,
+       46,   53,  215,  215,   56,   59,   65,   68,   71,   57,
+       59,  215,   57,  215,  215,  215,  215,  215,   75,   94,
+       97,   98,  106,   58,    0,   70,   92,   93,   94,   99,
+      100,  102,  107,  108,  101,  134,  124,  121,  127,  109,
+      130,  132,  133,  156,  144,  149,  143,  151,  154,  156,
+      159,  161,  162,  164,  167,  172,  175,  177,  215,   59,
+       49
     } ;
 
-static yyconst flex_int16_t yy_def[78] =
+static yyconst flex_int16_t yy_def[82] =
     {   0,
-       75,    1,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   76,   75,   75,   76,   76,   76,   76,   76,   76,
-       76,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   77,   76,   76,   29,   29,   29,   29,
-       29,   29,   29,   29,   29,   29,   29,   29,   29,   29,
-       29,   29,   29,   29,   29,   29,   29,   29,   29,   29,
-       29,   29,   29,   29,    0,   75,   75
+       79,    1,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   80,   79,   79,   80,   80,   80,   80,   80,   29,
+       29,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   81,   29,   29,   29,   29,   29,
+       29,   29,   29,   29,   79,   79,   29,   29,   29,   29,
+       29,   29,   29,   79,   29,   29,   29,   29,   29,   29,
+       29,   29,   29,   29,   29,   29,   29,   29,    0,   79,
+       79
     } ;
 
-static yyconst flex_int16_t yy_nxt[231] =
+static yyconst flex_int16_t yy_nxt[263] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,    8,   12,
-       13,   14,   15,    8,   16,   17,   18,   19,   20,   21,
-       22,   22,   23,   24,    8,   22,   22,   25,   26,   27,
-       28,   29,   22,   22,   22,   22,   30,   31,   22,   22,
-       22,   32,   33,   34,   35,   36,   38,   38,   44,   39,
-       39,   41,   42,   45,   37,   37,   40,   55,   37,   43,
-       36,   36,   43,   44,   44,   44,   44,   44,   44,   45,
-       44,   44,   44,   44,   37,   40,   44,   44,   37,   44,
-       44,   44,   44,   39,   39,   39,   39,   46,   47,   48,
-       41,   41,   50,   49,   52,   36,   51,   37,   36,   41,
+       13,   14,   15,    8,   16,   17,   17,   18,   19,   20,
+       21,   22,   22,   22,   23,   24,    8,   22,   22,   25,
+       26,   27,   28,   29,   22,   22,   22,   22,   30,   31,
+       22,   22,   22,   32,   33,   34,   35,   36,   38,   38,
+       45,   41,   39,   40,   40,   44,   36,   37,   37,   42,
+       46,   37,   43,   43,   43,   36,   44,   45,   45,   45,
+       45,   45,   45,   45,   45,   45,   37,   37,   42,   45,
+       45,   45,   45,   45,   45,   45,   45,   45,   53,   46,
+       41,   46,   36,   46,   47,   46,   48,   37,   42,   54,
 
-       42,   44,   44,   44,   44,   53,   45,   45,   45,   36,
-       45,   45,   45,   56,   57,   45,   45,   75,   54,   45,
-       45,   45,   61,   58,   59,   45,   45,   60,   45,   75,
-       45,   45,   45,   63,   45,   45,   62,   45,   45,   45,
-       45,   45,   45,   45,   45,   75,   45,   45,   64,   65,
-       45,   45,   66,   68,   45,   45,   67,   45,   69,   45,
-       45,   45,   45,   45,   45,   45,   70,   71,   45,   45,
-       45,   45,   45,   72,   45,   45,   45,   73,   74,   45,
-       45,   75,   75,   45,    3,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
+       49,   36,   46,   51,   36,   50,   46,   52,   43,   43,
+       43,   55,   55,   56,   56,   55,   55,   42,   79,   56,
+       43,   43,   43,   57,   46,   46,   46,   79,   46,   58,
+       46,   46,   46,   59,   46,   46,   46,   60,   46,   46,
+       46,   46,   61,   46,   46,   46,   63,   62,   64,   64,
+       64,   79,   65,   46,   79,   64,   46,   46,   67,   46,
+       46,   66,   46,   46,   46,   46,   46,   79,   46,   46,
+       64,   64,   64,   68,   69,   46,   46,   64,   70,   46,
+       46,   46,   71,   46,   73,   46,   46,   46,   46,   72,
+       46,   46,   46,   46,   46,   74,   46,   75,   46,   46,
 
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75
+       46,   79,   76,   46,   46,   77,   78,   46,   46,   46,
+       79,   46,   79,   46,    3,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79
     } ;
 
-static yyconst flex_int16_t yy_chk[231] =
+static yyconst flex_int16_t yy_chk[263] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    9,   12,   14,   77,   16,
-       16,   17,   17,   47,   14,   12,   16,   47,    9,   19,
-       19,   21,   21,   22,   22,   25,   25,   26,   26,   76,
-       27,   27,   28,   28,   33,   16,   29,   29,   43,   30,
-       30,   31,   31,   39,   39,   40,   40,   25,   26,   27,
-       41,   41,   29,   28,   30,   20,   29,    8,   33,   42,
+        1,    1,    1,    1,    1,    1,    1,    9,   12,   14,
+       81,   16,   14,   14,   14,   19,   19,   14,   12,   16,
+       80,    9,   17,   17,   17,   21,   21,   22,   22,   22,
+       25,   25,   25,   26,   26,   26,   33,   44,   16,   27,
+       27,   27,   28,   28,   28,   29,   29,   29,   30,   30,
+       39,   31,   20,   30,   25,   31,   26,    8,   39,   31,
 
-       42,   45,   45,   46,   46,   31,   48,   50,   49,    7,
-       48,   50,   49,   48,   49,   51,   52,    3,   46,   51,
-       52,   53,   54,   51,   52,   53,   54,   53,   55,    0,
-       54,   57,   55,   56,   56,   57,   55,   58,   56,   59,
-       60,   58,   63,   59,   60,    0,   63,   64,   59,   60,
-       61,   64,   61,   64,   61,   62,   62,   66,   65,   62,
-       65,   66,   67,   68,   65,   69,   67,   68,   70,   69,
-       71,   72,   70,   69,   71,   72,   74,   70,   73,   73,
-       74,    0,    0,   73,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
+       27,   33,   46,   29,    7,   28,   46,   29,   40,   40,
+       40,   41,   41,   42,   42,   55,   55,   39,    3,   42,
+       43,   43,   43,   47,   47,   48,   49,    0,   47,   48,
+       49,   50,   51,   49,   52,   50,   51,   50,   52,   53,
+       54,   60,   52,   53,   54,   60,   54,   53,   56,   56,
+       56,    0,   57,   58,    0,   56,   57,   58,   59,   59,
+       57,   58,   61,   59,   62,   63,   61,    0,   62,   63,
+       64,   64,   64,   62,   63,   67,   65,   64,   65,   67,
+       65,   66,   66,   68,   69,   66,   69,   68,   70,   68,
+       69,   71,   70,   72,   73,   71,   74,   72,   73,   75,
 
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75,
-       75,   75,   75,   75,   75,   75,   75,   75,   75,   75
+       74,    0,   73,   75,   76,   74,   77,   77,   76,   78,
+        0,   77,    0,   78,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79,   79,   79,   79,   79,   79,   79,   79,   79,
+       79,   79
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -534,7 +544,7 @@ char *yytext;
 #include "require.h"
 #include "y.tab.h"
 int line = 0;
-#line 538 "lex.yy.c"
+#line 548 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -721,10 +731,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 38 "lexical.l"
+#line 45 "lexical.l"
 
 
-#line 728 "lex.yy.c"
+#line 738 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -777,13 +787,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 76 )
+				if ( yy_current_state >= 80 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 185 );
+		while ( yy_base[yy_current_state] != 215 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -809,284 +819,330 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 40 "lexical.l"
+#line 47 "lexical.l"
 ;
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 42 "lexical.l"
+#line 49 "lexical.l"
 {
 	++line;
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 46 "lexical.l"
-{	
+#line 53 "lexical.l"
+{
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
 	printf("INT %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "INT");
-	yylval.MYTYPE.line = line;
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "INT");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return INT;
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 54 "lexical.l"
+#line 63 "lexical.l"
 {
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
 	printf("STRUCT %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "STRUCT");
-	yylval.MYTYPE.line = line;
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "STRUCT");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return STRUCT;
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 62 "lexical.l"
+#line 73 "lexical.l"
 {	
 	printf("RETURN %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "RETURN");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "RETURN");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return RETURN;
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 70 "lexical.l"
+#line 83 "lexical.l"
 {	
 	printf("IF %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "IF");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "IF");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return IF;
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 78 "lexical.l"
+#line 93 "lexical.l"
 {	
 	printf("ELSE %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "ELSE");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "ELSE");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return ELSE;
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 86 "lexical.l"
+#line 103 "lexical.l"
 {	
 	printf("BREAK %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "BREAK");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "BREAK");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return BREAK;
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 94 "lexical.l"
+#line 113 "lexical.l"
 {	
 	printf("CONT %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "CONT");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "CONT");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return CONT;
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 102 "lexical.l"
+#line 123 "lexical.l"
 {	
 	printf("FOR %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "FOR");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "FOR");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return FOR;
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 110 "lexical.l"
+#line 133 "lexical.l"
 {	
 	printf("LP %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "LP");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "LP");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return LP;
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 118 "lexical.l"
+#line 143 "lexical.l"
 {	
 	printf("RP %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "RP");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "RP");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return RP;
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 126 "lexical.l"
+#line 153 "lexical.l"
 {	
 	printf("LB %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "LB");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "LB");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return LB;
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 134 "lexical.l"
+#line 163 "lexical.l"
 {	
 	printf("RB %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "RB");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "RB");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return RB;
 }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 142 "lexical.l"
+#line 173 "lexical.l"
 {	
 	printf("LC %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "LC");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "LC");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return LC;
 }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 150 "lexical.l"
+#line 183 "lexical.l"
 {	
 	printf("RC %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "RC");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "RC");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return RC;
 }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 159 "lexical.l"
+#line 194 "lexical.l"
 {	
 	printf("TYPE %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "TYPE");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "TYPE");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 	return TYPE;
 }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 167 "lexical.l"
+#line 204 "lexical.l"
 {	
 	printf("ID %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "ID");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "ID");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return ID;
 }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 176 "lexical.l"
+#line 215 "lexical.l"
 {	
 	printf("SEMI %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "SEMI");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "SEMI");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return SEMI;
 }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 185 "lexical.l"
+#line 226 "lexical.l"
 {	
 	printf("COMMA %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "COMMA");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "COMMA");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return COMMA;
 }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 194 "lexical.l"
+#line 237 "lexical.l"
 {	
 	printf("DOT %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "DOT");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "DOT");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return DOT;
 }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 203 "lexical.l"
+#line 248 "lexical.l"
 {	
 	printf("BINARYOP %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "BINARYOP");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "BINARYOP");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return BINARYOP;
 }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 212 "lexical.l"
+#line 259 "lexical.l"
 {	
 	printf("UNARYOP %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "UNARYOP");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "UNARYOP");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return UNARYOP;
 }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 221 "lexical.l"
+#line 270 "lexical.l"
 {	
 	printf("ASSIGNOP %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "ASSIGNOP");
-	yylval.MYTYPE.line = line;
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "ASSIGNOP");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return ASSIGNOP;
 }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 230 "lexical.l"
+#line 281 "lexical.l"
 {
+	yylval.MYTYPE = (struct SelfType*) malloc(1 * sizeof(struct SelfType));
 	printf("ASSIGNOP %s\n", yytext);
-	sscanf(yytext, "%s", yylval.MYTYPE.content);
-	sprintf(yylval.MYTYPE.token, "%s", "ASSIGNOP");
-	yylval.MYTYPE.line = line;
+	sscanf(yytext, "%s", yylval.MYTYPE -> content);
+	sprintf(yylval.MYTYPE -> token, "%s", "ASSIGNOP");
+	yylval.MYTYPE -> line = line;
+	yylval.MYTYPE -> left = yylval.MYTYPE -> right = NULL;
 
 	return EQUALOP;
 }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 239 "lexical.l"
+#line 292 "lexical.l"
 ECHO;
 	YY_BREAK
-#line 1090 "lex.yy.c"
+#line 1146 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1378,7 +1434,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 76 )
+			if ( yy_current_state >= 80 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1406,11 +1462,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 76 )
+		if ( yy_current_state >= 80 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 75);
+	yy_is_jam = (yy_current_state == 79);
 
 	return yy_is_jam ? 0 : yy_current_state;
 }
@@ -2084,7 +2140,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 239 "lexical.l"
+#line 292 "lexical.l"
 
 
 
