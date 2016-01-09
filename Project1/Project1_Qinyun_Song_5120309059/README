@@ -1,0 +1,59 @@
+Project 1: Implementing a Lexical-Syntax Analyzer
+by Qinyun Song, student ID: 5120309059
+
+Step 0: Pre-defined the document "require.h"
+	It defines something that are required to be shared between lexical and syntax analyzer.
+	It first defined a struct "SelfType" which intended to re-define the type of YYSTYPE.
+	It then declared several functions in syntax analyzer so they can be found during compiling.
+
+Step 1: Implementing a Lexical Analyzer
+	The code is named as "lexical.l".
+	The code is divided into four parts.
+	1. Line 1-8
+		In this part, it includes "require.h" which is introduced above, needed c libraries, and a counter to count the number of current line.
+	2. Line 10-44
+		In this part, it defines some tokens by regular expressions.
+	3. Line 47-290
+		In this part, it defines what the lexical analyzer would do when they found a token.
+	4. Line 294-296
+		In this part, it defines a classical function "yywrap".
+		
+Step 2: Implementing a Syntax Analyzer
+	The code is named as "syntax.y"
+	The code is divided into seven parts.
+	1. Line 1-11
+		In this part, it includes "require.h" introduced above, c libraries, file pointers, and a pointer to be assigned as the root of the syntax tree.
+	2. Line 12-15
+		In this part, it specifies the type of YYSTYPE as a pointer to struct "selfType".
+	3. Line 17-36
+		In this part, it defines the type of all the non-terminals.
+	4. Line 38-60
+		In this part, it defines all the terminals which are appeared in "lexical.l".
+	5. Line 62-63
+		In this part, it defines some attributes of the non-terminals to restrict the conflicts.
+	6. Line 66-161
+		In this part, it implements the required non-terminals.
+		I made some changes of the non-terminals in the given grammar. The changes and the reasons for why I did these changes are:
+		a. Change all the right-recursion into left-recursion since it is much more faster with grammar of left-recursion.
+		b. The non-terminal "EXTDEF" is used to construct some definitions. So I specify that the program can not only produce "EXTDEF" but also "STMT" since the program can contain only statements.
+		c. Delete "EXTVARS" since it can be merged with "DECS".
+		d. Change the grammar of the non-terminal "PARA". The parameters can not only be represented as "int a(0)" but also "int a = 0" because you can assign the parameters corresponding value when defining them.
+		e. Delete "STMTS" since "STMTBLOCK" can not only contains statements("STMT") but also definitions("EXTDEF") and then it became useless.
+		f. Change the grammar of the non-terminal "DEC". Here are the reasons.
+			First, "VAR" can not only be assigned as "INT" but also as "EXP" such as "a = 3 * 5;". 
+			Second, it can be also assigned as "a[2] = {0, 1}".
+		g. Change the grammar of the non-terminal "EXP".
+			First, "EXP" can not only be expanded to "EXP DOT ID" but also "EXP DOT ID ARRS". For example, "iterator.first" is a valid expression.
+			Second, "EXP" can be expanded by some binary operaters. For example, "i += 1" and "i = 1" are both valid expressions.
+	7. Line 164-264
+		In this part, it defines some functions that can help to construct a syntax tree.
+		Also, it defines a function to print the tree.
+		At last, it defines the classical function "main" where the program would start at.
+	At last, after all the changes I made in the grammar, I also found an error in the grammar of the non-terminal "ARRS". The requirement specifies that "Only integers and 1-dimensional array are used". But according to the grammar of "ARRS", there can be a valid expression as "a[100][100]" since "ARRS" can add more than one brackes to the expression. I still, however, implemented the specified grammar.
+	
+Step 3: Run the program!
+	To run my program, first you need to compile my codes by using the command:
+		"make"
+	Then suppose your input file is named as "input" and output file is named as "output", then the command to run my program is:
+		"./parser input output"
+	The program will output the final syntax tree to the output file.
